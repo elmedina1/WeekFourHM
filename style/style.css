@@ -49,3 +49,9 @@ p {
 .navbar-light {
   background-color: #f8f4ef !important;
 }
+
+.footer {
+  font-family: Playfair + Display, sans-serif;
+  font-size: 10px;
+  text-align: center;
+}

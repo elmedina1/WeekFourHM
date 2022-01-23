@@ -4,10 +4,24 @@
 
     font-family: 'Rubik', sans-serif; */
 
+body {
+  background-image: url('/assets/back.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
 h1 {
   font-family: Rubik, sans-serif !important;
   font-weight: 500 !important;
   text-align: center;
+  color: #4f81c7;
+}
+
+h5 {
+  color: #64c4ed;
+}
+.header-top {
 }
 
 .gallery {
@@ -22,4 +36,13 @@ h1 {
 
 .card {
   border: none !important;
+  background: transparent !important;
+}
+
+.img {
+  border-radius: 40px !important;
+}
+
+.navbar-light {
+  background-color: #f8f4ef !important;
 }

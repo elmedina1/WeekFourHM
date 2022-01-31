@@ -18,6 +18,13 @@ h1 {
   color: #4f81c7;
 }
 
+h2 {
+  font-family: Rubik, sans-serif !important;
+  font-weight: 500 !important;
+  text-align: center;
+  color: #4f81c7;
+}
+
 h5 {
   color: #22559c;
 }
@@ -25,6 +32,20 @@ h5 {
 p {
   font-family: Playfair + Display, sans-serif;
   font-weight: 500;
+}
+
+.detail {
+  color: #51514b;
+  text-align: center;
+  font-family: Playfair + Display, sans-serif;
+  font-weight: 600;
+}
+.desc {
+  font-family: Playfair + Display, sans-serif;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #51514b;
 }
 
 .gallery {
@@ -54,4 +75,13 @@ p {
   font-family: Playfair + Display, sans-serif;
   font-size: 10px;
   text-align: center;
+}
+
+img {
+  max-height: 100px;
+  max-height: 170px;
+}
+.tile {
+  max-width: 400px !important;
+  max-height: 250px !important;
 }

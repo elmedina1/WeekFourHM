@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<!--[if IE 6]>
+         _  __ _     _ ___  _
+        / |/ // \   / \\  \//
+        |   / | |   | | \  /
+        |   \ | |_/\| | /  \
+        \_|\_\\____/\_//__/\\
+
+        Copyright: © InterSoft d.o.o. Sarajevo
+        Development: github.com/mariosimic
+        Jobs: klix.ba/posao
+-->
+<meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"7a33b0eb0e",applicationID:"442221064"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<title>Likovna kolonija u Počitelju ponovo oživjela živopisni hercegovački gradić</title>
+<meta name="description" content="U Internacionalnoj umjetničkoj koloniji Počitelj u toku je 52. saziv likovne kolonije, a trajat će do 27. jula.">
+<meta name="keywords" content="umjetnost, Počitelj, likovna kolonija, ULUBiH, Admir Mujkić">
+<meta property="og:title" content="Likovna kolonija u Počitelju ponovo oživjela živopisni hercegovački gradić">
+<meta property="og:description" content="U Internacionalnoj umjetničkoj koloniji Počitelj u toku je 52. saziv likovne kolonije, a trajat će do 27. jula." />
+<meta property="og:image" content="https://static.klix.ba/media/images/vijesti/b_160724063.jpg?v=1">
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@">
+<meta name="twitter:creator" content="Klix.ba">
+<meta name="twitter:domain" content="">
+<meta name="twitter:title" content="Likovna kolonija u Počitelju ponovo oživjela živopisni hercegovački gradić">
+<meta name="twitter:description" content="U Internacionalnoj umjetničkoj koloniji Počitelj u toku je 52. saziv likovne kolonije, a trajat će do 27. jula.">
+<meta name="twitter:image" content="https://static.klix.ba/media/images/vijesti/b_160724063.jpg?v=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+    /*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com*/
+
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */html{-moz-tab-size:4;-o-tab-size:4;tab-size:4;line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji}hr{height:0;color:inherit}abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}legend{padding:0}progress{vertical-align:baseline}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}button{background-color:transparent;background-image:none}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}fieldset,ol,ul{margin:0;padding:0}ol,ul{list-style:none}html{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}body{font-family:inherit;line-height:inherit}*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}hr{border-top-width:1px}img{border-style:solid}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#9ca3af}input::placeholder,textarea::placeholder{color:#9ca3af}[role=button],button{cursor:pointer}table{border-collapse:collapse}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}button,input,optgroup,select,textarea{padding:0;line-height:inherit;color:inherit}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[multiple],[type=date],[type=email],[type=month],[type=number],[type=password],[type=search],[type=text],[type=time],[type=url],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0;padding:.5rem .75rem;font-size:1rem;line-height:1.5rem}[multiple]:focus,[type=date]:focus,[type=email]:focus,[type=month]:focus,[type=number]:focus,[type=password]:focus,[type=search]:focus,[type=text]:focus,[type=time]:focus,[type=url]:focus,select:focus,textarea:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 transparent);border-color:#2563eb}input::-moz-placeholder,textarea::-moz-placeholder{color:#6b7280;opacity:1}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#6b7280;opacity:1}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}select{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");background-position:right .5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;-webkit-print-color-adjust:exact;color-adjust:exact}[multiple]{background-image:none;background-position:0 0;background-repeat:unset;background-size:initial;padding-right:.75rem;-webkit-print-color-adjust:unset;color-adjust:unset}[type=checkbox],[type=radio]{-webkit-appearance:none;-moz-appearance:none;appearance:none;padding:0;-webkit-print-color-adjust:exact;color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px}[type=checkbox]{border-radius:0}[type=radio]{border-radius:100%}[type=checkbox]:focus,[type=radio]:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 transparent)}[type=checkbox]:checked,[type=radio]:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:50%;background-repeat:no-repeat}[type=checkbox]:checked{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E")}[type=radio]:checked{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E")}[type=checkbox]:checked:focus,[type=checkbox]:checked:hover,[type=radio]:checked:focus,[type=radio]:checked:hover{border-color:transparent;background-color:currentColor}[type=checkbox]:indeterminate{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3E%3C/svg%3E");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:50%;background-repeat:no-repeat}[type=checkbox]:indeterminate:focus,[type=checkbox]:indeterminate:hover{border-color:transparent;background-color:currentColor}[type=file]{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type=file]:focus{outline:1px auto -webkit-focus-ring-color}@font-face{font-family:ClanPro-Medium;src:url(https://static.klix.ba/fonts/ClanPro-Medium.eot#iefix) format("embedded-opentype"),url(https://static.klix.ba/fonts/ClanPro-Medium.otf) format("opentype"),url(https://static.klix.ba/fonts/ClanPro-Medium.woff) format("woff"),url(https://static.klix.ba/fonts/ClanPro-Medium.ttf) format("truetype"),url(https://static.klix.ba/fonts/ClanPro-Medium.svg#ClanPro-Bold) format("svg");font-display:swap}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.prose{color:#333;max-width:65ch}.prose [class~=lead]{color:#4b5563;font-size:1.25em;line-height:1.6;margin-top:1.2em;margin-bottom:1.2em}.prose a{color:#1499c8;text-decoration:underline;font-weight:500}.prose a:hover{color:#2c5282}.prose strong{color:#111827;font-weight:600}.prose ol{counter-reset:list-counter;margin-top:1.25em;margin-bottom:1.25em}.prose ol>li{position:relative;counter-increment:list-counter;padding-left:1.75em}.prose ol>li:before{content:counter(list-counter) ".";position:absolute;font-weight:400;color:#6b7280;left:0}.prose ul>li{position:relative;padding-left:1.75em}.prose ul>li:before{content:"";position:absolute;background-color:#d1d5db;border-radius:50%;width:.375em;height:.375em;top:.6875em;left:.25em}.prose hr{border-color:#e5e7eb;border-top-width:1px;margin-top:3em;margin-bottom:3em}.prose blockquote{font-weight:500;font-style:italic;color:#111827;border-left-width:.25rem;border-left-color:#e5e7eb;quotes:"\201C""\201D""\2018""\2019";margin-top:1.6em;margin-bottom:1.6em;padding-left:1em}.prose blockquote p:first-of-type:before{content:open-quote}.prose blockquote p:last-of-type:after{content:close-quote}.prose h1{color:#111827;font-weight:800;font-size:2.25em;margin-top:0;margin-bottom:.8888889em;line-height:1.1111111}.prose h2{font-size:1.3em;margin-top:2em;margin-bottom:1em;line-height:1.3333333}.prose h2,.prose h3{color:#111827;font-weight:600}.prose h3{font-size:1.25em;margin-top:1.6em;margin-bottom:.6em;line-height:1.6}.prose h4{color:#111827;font-weight:600;margin-top:1.5em;margin-bottom:.5em;line-height:1.5}.prose figure figcaption{color:#6b7280;font-size:.875em;line-height:1.4285714;margin-top:.8571429em}.prose code{color:#111827;font-weight:600;font-size:.875em}.prose code:after,.prose code:before{content:"`"}.prose a code{color:#111827}.prose pre{color:#e5e7eb;background-color:#1f2937;overflow-x:auto;font-size:.875em;line-height:1.7142857;margin-top:1.7142857em;margin-bottom:1.7142857em;border-radius:.375rem;padding:.8571429em 1.1428571em}.prose pre code{background-color:transparent;border-width:0;border-radius:0;padding:0;font-weight:400;color:inherit;font-size:inherit;font-family:inherit;line-height:inherit}.prose pre code:after,.prose pre code:before{content:""}.prose table{width:100%;table-layout:auto;text-align:left;margin-top:2em;margin-bottom:2em;font-size:.875em;line-height:1.7142857}.prose thead{color:#111827;font-weight:600;border-bottom-width:1px;border-bottom-color:#d1d5db}.prose thead th{vertical-align:bottom;padding-right:.5714286em;padding-bottom:.5714286em;padding-left:.5714286em}.prose tbody tr{border-bottom-width:1px;border-bottom-color:#e5e7eb}.prose tbody tr:last-child{border-bottom-width:0}.prose tbody td{vertical-align:top;padding:.5714286em}.prose{font-size:1rem;line-height:1.75}.prose p{margin-top:1.25em;margin-bottom:1.25em}.prose figure,.prose img,.prose video{margin-top:2em;margin-bottom:2em}.prose figure>*{margin-top:0;margin-bottom:0}.prose h2 code{font-size:.875em}.prose h3 code{font-size:.9em}.prose ul{margin-top:1.25em;margin-bottom:1.25em}.prose li{margin-top:.5em;margin-bottom:.5em}.prose>ul>li p{margin-top:.75em;margin-bottom:.75em}.prose>ul>li>:first-child{margin-top:1.25em}.prose>ul>li>:last-child{margin-bottom:1.25em}.prose>ol>li>:first-child{margin-top:1.25em}.prose>ol>li>:last-child{margin-bottom:1.25em}.prose ol ol,.prose ol ul,.prose ul ol,.prose ul ul{margin-top:.75em;margin-bottom:.75em}.prose h2+*,.prose h3+*,.prose h4+*,.prose hr+*{margin-top:0}.prose thead th:first-child{padding-left:0}.prose thead th:last-child{padding-right:0}.prose tbody td:first-child{padding-left:0}.prose tbody td:last-child{padding-right:0}.prose>:first-child{margin-top:0}.prose>:last-child{margin-bottom:0}.prose b{font-weight:600}.prose figcaption{margin-top:.3em!important;font-size:.8rem!important}.space-y-0>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px*var(--tw-space-y-reverse))}.space-x-0>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0px*var(--tw-space-x-reverse));margin-left:calc(0px*(1 - var(--tw-space-x-reverse)))}.space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem*var(--tw-space-y-reverse))}.space-x-1>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem*var(--tw-space-x-reverse));margin-left:calc(0.25rem*(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem*var(--tw-space-y-reverse))}.space-x-2>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem*var(--tw-space-x-reverse));margin-left:calc(0.5rem*(1 - var(--tw-space-x-reverse)))}.space-x-3>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem*var(--tw-space-x-reverse));margin-left:calc(0.75rem*(1 - var(--tw-space-x-reverse)))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem*var(--tw-space-x-reverse));margin-left:calc(1rem*(1 - var(--tw-space-x-reverse)))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.space-x-5>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.25rem*var(--tw-space-x-reverse));margin-left:calc(1.25rem*(1 - var(--tw-space-x-reverse)))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem*var(--tw-space-x-reverse));margin-left:calc(1.5rem*(1 - var(--tw-space-x-reverse)))}.space-x-7>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.75rem*var(--tw-space-x-reverse));margin-left:calc(1.75rem*(1 - var(--tw-space-x-reverse)))}.space-y-8>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem*var(--tw-space-y-reverse))}.space-x-1\.5>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem*var(--tw-space-x-reverse));margin-left:calc(0.375rem*(1 - var(--tw-space-x-reverse)))}.divide-y>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px*var(--tw-divide-y-reverse))}.divide-x>:not([hidden])~:not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(1px*var(--tw-divide-x-reverse));border-left-width:calc(1px*(1 - var(--tw-divide-x-reverse)))}.divide-gray-100>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgba(243,244,246,var(--tw-divide-opacity))}.divide-gray-200>:not([hidden])~:not([hidden]){--tw-divide-opacity:1;border-color:rgba(229,231,235,var(--tw-divide-opacity))}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.bg-transparent{background-color:transparent}.bg-black{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgba(249,250,251,var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgba(243,244,246,var(--tw-bg-opacity))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgba(229,231,235,var(--tw-bg-opacity))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgba(209,213,219,var(--tw-bg-opacity))}.bg-gray-400{--tw-bg-opacity:1;background-color:rgba(156,163,175,var(--tw-bg-opacity))}.bg-gray-500{--tw-bg-opacity:1;background-color:rgba(107,114,128,var(--tw-bg-opacity))}.bg-gray-600{--tw-bg-opacity:1;background-color:rgba(75,85,99,var(--tw-bg-opacity))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgba(31,41,55,var(--tw-bg-opacity))}.bg-red-100{--tw-bg-opacity:1;background-color:rgba(254,226,226,var(--tw-bg-opacity))}.bg-red-500{--tw-bg-opacity:1;background-color:rgba(239,68,68,var(--tw-bg-opacity))}.bg-red-600{--tw-bg-opacity:1;background-color:rgba(220,38,38,var(--tw-bg-opacity))}.bg-green-100{--tw-bg-opacity:1;background-color:rgba(209,250,229,var(--tw-bg-opacity))}.bg-green-600{--tw-bg-opacity:1;background-color:rgba(5,150,105,var(--tw-bg-opacity))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgba(239,246,255,var(--tw-bg-opacity))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgba(219,234,254,var(--tw-bg-opacity))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgba(37,99,235,var(--tw-bg-opacity))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgba(79,70,229,var(--tw-bg-opacity))}.bg-vijesti{--tw-bg-opacity:1;background-color:rgba(211,61,61,var(--tw-bg-opacity))}.bg-lifestyle{--tw-bg-opacity:1;background-color:rgba(226,166,0,var(--tw-bg-opacity))}.bg-biznis{--tw-bg-opacity:1;background-color:rgba(239,111,62,var(--tw-bg-opacity))}.bg-sport{--tw-bg-opacity:1;background-color:rgba(85,172,83,var(--tw-bg-opacity))}.bg-magazin{--tw-bg-opacity:1;background-color:rgba(164,80,145,var(--tw-bg-opacity))}.bg-auto{--tw-bg-opacity:1;background-color:rgba(72,123,175,var(--tw-bg-opacity))}.bg-scitech{--tw-bg-opacity:1;background-color:rgba(64,175,238,var(--tw-bg-opacity))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgba(249,250,251,var(--tw-bg-opacity))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgba(243,244,246,var(--tw-bg-opacity))}.hover\:bg-gray-200:hover{--tw-bg-opacity:1;background-color:rgba(229,231,235,var(--tw-bg-opacity))}.hover\:bg-gray-300:hover{--tw-bg-opacity:1;background-color:rgba(209,213,219,var(--tw-bg-opacity))}.hover\:bg-gray-500:hover{--tw-bg-opacity:1;background-color:rgba(107,114,128,var(--tw-bg-opacity))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgba(185,28,28,var(--tw-bg-opacity))}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgba(29,78,216,var(--tw-bg-opacity))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgba(67,56,202,var(--tw-bg-opacity))}.bg-opacity-20{--tw-bg-opacity:0.2}.bg-opacity-50{--tw-bg-opacity:0.5}.bg-opacity-60{--tw-bg-opacity:0.6}.bg-auto{background-size:auto}.border-transparent{border-color:transparent}.border-gray-200{--tw-border-opacity:1;border-color:rgba(229,231,235,var(--tw-border-opacity))}.border-gray-300{--tw-border-opacity:1;border-color:rgba(209,213,219,var(--tw-border-opacity))}.border-gray-700{--tw-border-opacity:1;border-color:rgba(55,65,81,var(--tw-border-opacity))}.border-red-500{--tw-border-opacity:1;border-color:rgba(239,68,68,var(--tw-border-opacity))}.border-green-500{--tw-border-opacity:1;border-color:rgba(16,185,129,var(--tw-border-opacity))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgba(59,130,246,var(--tw-border-opacity))}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgba(99,102,241,var(--tw-border-opacity))}.rounded-none{border-radius:0}.rounded-sm{border-radius:.125rem}.rounded{border-radius:.25rem}.rounded-md{border-radius:.375rem}.rounded-lg{border-radius:.5rem}.rounded-full{border-radius:9999px}.rounded-r-md{border-top-right-radius:.375rem;border-bottom-right-radius:.375rem}.rounded-l-md{border-top-left-radius:.375rem;border-bottom-left-radius:.375rem}.border-none{border-style:none}.border-0{border-width:0}.border-2{border-width:2px}.border{border-width:1px}.border-r-0{border-right-width:0}.border-t{border-top-width:1px}.border-r{border-right-width:1px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.cursor-pointer{cursor:pointer}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.inline-grid{display:inline-grid}.hidden{display:none}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.flex-nowrap{flex-wrap:nowrap}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-items-end{justify-items:end}.justify-items-center{justify-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.flex-1{flex:1 1 0%}.flex-auto{flex:1 1 auto}.flex-none{flex:none}.flex-grow-0{flex-grow:0}.flex-grow{flex-grow:1}.font-title{font-family:ClanPro-Medium,system-ui}.font-tekst{font-family:system-ui}.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-extrabold{font-weight:800}.h-3{height:.75rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-10{height:2.5rem}.h-16{height:4rem}.h-20{height:5rem}.h-32{height:8rem}.h-250{height:250px}.h-280{height:280px}.h-600{height:600px}.h-full{height:100%}.h-logo{height:24px}.h-logolg{height:40px}.text-xss{font-size:.65rem}.text-xs{font-size:.7rem}.text-sm{font-size:.8rem}.text-tiny{font-size:.9rem}.text-base{font-size:.95rem}.text-lg{font-size:1.05rem}.text-xl{font-size:1.1rem}.text-2xl{font-size:1.5rem}.text-3xl{font-size:1.875rem}.leading-3{line-height:.75rem}.leading-6{line-height:1.5rem}.leading-7{line-height:1.75rem}.leading-tight{line-height:1.25}.m-0{margin:0}.m-1{margin:.25rem}.my-0{margin-top:0;margin-bottom:0}.mx-0{margin-left:0;margin-right:0}.my-1{margin-top:.25rem;margin-bottom:.25rem}.mx-1{margin-left:.25rem;margin-right:.25rem}.my-2{margin-top:.5rem;margin-bottom:.5rem}.mx-2{margin-left:.5rem;margin-right:.5rem}.my-3{margin-top:.75rem;margin-bottom:.75rem}.mx-3{margin-left:.75rem;margin-right:.75rem}.mx-4{margin-left:1rem;margin-right:1rem}.my-5{margin-top:1.25rem;margin-bottom:1.25rem}.mx-8{margin-left:2rem;margin-right:2rem}.mx-auto{margin-left:auto;margin-right:auto}.-mx-3{margin-left:-.75rem;margin-right:-.75rem}.mt-0{margin-top:0}.mr-0{margin-right:0}.mb-0{margin-bottom:0}.ml-0{margin-left:0}.mt-1{margin-top:.25rem}.mr-1{margin-right:.25rem}.mb-1{margin-bottom:.25rem}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.mb-2{margin-bottom:.5rem}.ml-2{margin-left:.5rem}.mt-3{margin-top:.75rem}.mr-3{margin-right:.75rem}.mb-3{margin-bottom:.75rem}.ml-3{margin-left:.75rem}.mt-4{margin-top:1rem}.mb-4{margin-bottom:1rem}.ml-4{margin-left:1rem}.mt-5{margin-top:1.25rem}.mr-5{margin-right:1.25rem}.mb-5{margin-bottom:1.25rem}.ml-5{margin-left:1.25rem}.mt-6{margin-top:1.5rem}.mt-7{margin-top:1.75rem}.mr-7{margin-right:1.75rem}.mb-7{margin-bottom:1.75rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.mt-auto{margin-top:auto}.ml-auto{margin-left:auto}.mb-0\.5{margin-bottom:.125rem}.mr-2\.5{margin-right:.625rem}.mb-2\.5{margin-bottom:.625rem}.-mt-2{margin-top:-.5rem}.-mr-3{margin-right:-.75rem}.-ml-3{margin-left:-.75rem}.-mt-px{margin-top:-1px}.max-w-none{max-width:none}.max-w-lg{max-width:32rem}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.min-h-screen{min-height:100vh}.min-w-0{min-width:0}.object-cover{-o-object-fit:cover;object-fit:cover}.opacity-40{opacity:.4}.opacity-75{opacity:.75}.focus\:outline-none:focus,.outline-none{outline:2px solid transparent;outline-offset:2px}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.overflow-x-scroll{overflow-x:scroll}.p-0{padding:0}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-3{padding:.75rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-10{padding:2.5rem}.py-0{padding-top:0;padding-bottom:0}.px-0{padding-left:0;padding-right:0}.py-1{padding-top:.25rem;padding-bottom:.25rem}.px-1{padding-left:.25rem;padding-right:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.px-3{padding-left:.75rem;padding-right:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.py-20{padding-top:5rem;padding-bottom:5rem}.px-20{padding-left:5rem;padding-right:5rem}.py-28{padding-top:7rem;padding-bottom:7rem}.pt-0{padding-top:0}.pr-0{padding-right:0}.pb-0{padding-bottom:0}.pl-0{padding-left:0}.pt-1{padding-top:.25rem}.pb-1{padding-bottom:.25rem}.pl-1{padding-left:.25rem}.pt-2{padding-top:.5rem}.pb-2{padding-bottom:.5rem}.pl-2{padding-left:.5rem}.pt-3{padding-top:.75rem}.pb-3{padding-bottom:.75rem}.pt-4{padding-top:1rem}.pb-4{padding-bottom:1rem}.pt-5{padding-top:1.25rem}.pr-5{padding-right:1.25rem}.pb-5{padding-bottom:1.25rem}.pl-5{padding-left:1.25rem}.pt-6{padding-top:1.5rem}.pt-8{padding-top:2rem}.pb-10{padding-bottom:2.5rem}.pb-20{padding-bottom:5rem}.pb-0\.5{padding-bottom:.125rem}.pl-1\.5{padding-left:.375rem}.pb-2\/3{padding-bottom:66.66667%}.pb-2\/4{padding-bottom:50%}.pb-3\/4{padding-bottom:75%}.pb-1\/1{padding-bottom:100%}.pt-gsm{padding-top:49px}.pt-ssm{padding-top:44px}.placeholder-gray-400::-moz-placeholder{--tw-placeholder-opacity:1;color:rgba(156,163,175,var(--tw-placeholder-opacity))}.placeholder-gray-400:-ms-input-placeholder{--tw-placeholder-opacity:1;color:rgba(156,163,175,var(--tw-placeholder-opacity))}.placeholder-gray-400::placeholder{--tw-placeholder-opacity:1;color:rgba(156,163,175,var(--tw-placeholder-opacity))}.placeholder-gray-600::-moz-placeholder{--tw-placeholder-opacity:1;color:rgba(75,85,99,var(--tw-placeholder-opacity))}.placeholder-gray-600:-ms-input-placeholder{--tw-placeholder-opacity:1;color:rgba(75,85,99,var(--tw-placeholder-opacity))}.placeholder-gray-600::placeholder{--tw-placeholder-opacity:1;color:rgba(75,85,99,var(--tw-placeholder-opacity))}.pointer-events-none{pointer-events:none}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{top:0;right:0;bottom:0;left:0}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.left-0{left:0}.top-10{top:2.5rem}.top-12{top:3rem}.top-16{top:4rem}*{--tw-shadow:0 0 transparent}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,0.05)}.shadow,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow)}.shadow{--tw-shadow:0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);box-shadow:var(--tw-ring-offset-shadow,0 0 transparent),var(--tw-ring-shadow,0 0 transparent),var(--tw-shadow)}*{--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,0.5);--tw-ring-offset-shadow:0 0 transparent;--tw-ring-shadow:0 0 transparent}.focus\:ring-0:focus,.ring-0{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(var(--tw-ring-offset-width)) var(--tw-ring-color)}.focus\:ring-0:focus,.focus\:ring-2:focus,.ring-0{box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 transparent)}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.focus\:ring-offset-2:focus{--tw-ring-offset-width:2px}.focus\:ring-red-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgba(239,68,68,var(--tw-ring-opacity))}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgba(59,130,246,var(--tw-ring-opacity))}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgba(99,102,241,var(--tw-ring-opacity))}.fill-current{fill:currentColor}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-black{--tw-text-opacity:1;color:rgba(0,0,0,var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.text-gray-100{--tw-text-opacity:1;color:rgba(243,244,246,var(--tw-text-opacity))}.text-gray-200{--tw-text-opacity:1;color:rgba(229,231,235,var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity:1;color:rgba(209,213,219,var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity:1;color:rgba(156,163,175,var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity:1;color:rgba(75,85,99,var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.text-gray-800{--tw-text-opacity:1;color:rgba(31,41,55,var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgba(17,24,39,var(--tw-text-opacity))}.text-red-500{--tw-text-opacity:1;color:rgba(239,68,68,var(--tw-text-opacity))}.text-red-700{--tw-text-opacity:1;color:rgba(185,28,28,var(--tw-text-opacity))}.text-green-600{--tw-text-opacity:1;color:rgba(5,150,105,var(--tw-text-opacity))}.text-blue-500{--tw-text-opacity:1;color:rgba(59,130,246,var(--tw-text-opacity))}.text-blue-600{--tw-text-opacity:1;color:rgba(37,99,235,var(--tw-text-opacity))}.text-blue-700{--tw-text-opacity:1;color:rgba(29,78,216,var(--tw-text-opacity))}.text-indigo-600{--tw-text-opacity:1;color:rgba(79,70,229,var(--tw-text-opacity))}.text-vijesti{--tw-text-opacity:1;color:rgba(211,61,61,var(--tw-text-opacity))}.text-lifestyle{--tw-text-opacity:1;color:rgba(226,166,0,var(--tw-text-opacity))}.text-biznis{--tw-text-opacity:1;color:rgba(239,111,62,var(--tw-text-opacity))}.text-sport{--tw-text-opacity:1;color:rgba(85,172,83,var(--tw-text-opacity))}.text-magazin{--tw-text-opacity:1;color:rgba(164,80,145,var(--tw-text-opacity))}.text-auto{--tw-text-opacity:1;color:rgba(72,123,175,var(--tw-text-opacity))}.text-scitech{--tw-text-opacity:1;color:rgba(64,175,238,var(--tw-text-opacity))}.hover\:text-gray-400:hover{--tw-text-opacity:1;color:rgba(156,163,175,var(--tw-text-opacity))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgba(75,85,99,var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.hover\:text-gray-800:hover{--tw-text-opacity:1;color:rgba(31,41,55,var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgba(17,24,39,var(--tw-text-opacity))}.hover\:text-red-800:hover{--tw-text-opacity:1;color:rgba(153,27,27,var(--tw-text-opacity))}.hover\:text-green-800:hover{--tw-text-opacity:1;color:rgba(6,95,70,var(--tw-text-opacity))}.hover\:text-blue-500:hover{--tw-text-opacity:1;color:rgba(59,130,246,var(--tw-text-opacity))}.focus\:text-gray-800:focus{--tw-text-opacity:1;color:rgba(31,41,55,var(--tw-text-opacity))}.hover\:text-opacity-50:hover,.text-opacity-50{--tw-text-opacity:0.5}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.uppercase{text-transform:uppercase}.underline{text-decoration:underline}.line-through{text-decoration:line-through}.hover\:underline:hover{text-decoration:underline}.hover\:no-underline:hover{text-decoration:none}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.align-middle{vertical-align:middle}.align-bottom{vertical-align:bottom}.align-text-bottom{vertical-align:text-bottom}.visible{visibility:visible}.whitespace-nowrap{white-space:nowrap}.break-words{overflow-wrap:break-word}.w-3{width:.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-10{width:2.5rem}.w-14{width:3.5rem}.w-20{width:5rem}.w-24{width:6rem}.w-56{width:14rem}.w-300{width:300px}.w-336{width:336px}.w-658{width:658px}.w-auto{width:auto}.w-3\/4{width:75%}.w-1\/2{width:50%}.w-1\/3{width:33.333333%}.w-1\/4{width:25%}.w-full{width:100%}.w-logo{width:58px}.w-logolg{width:80px}.z-10{z-index:10}.z-30{z-index:30}.z-40{z-index:40}.z-50{z-index:50}.gap-0{gap:0}.gap-3{gap:.75rem}.gap-0\.5{gap:.125rem}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.grid-cols-10{grid-template-columns:repeat(10,minmax(0,1fr))}.grid-cols-11{grid-template-columns:repeat(11,minmax(0,1fr))}.grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.col-span-full{grid-column:1/-1}.grid-rows-1{grid-template-rows:repeat(1,minmax(0,1fr))}.row-start-3{grid-row-start:3}.transform{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;transform:translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.rotate-0{--tw-rotate:0deg}.rotate-90{--tw-rotate:90deg}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}@-webkit-keyframes spin{to{transform:rotate(1turn)}}@keyframes spin{to{transform:rotate(1turn)}}@-webkit-keyframes ping{75%,to{transform:scale(2);opacity:0}}@keyframes ping{75%,to{transform:scale(2);opacity:0}}@-webkit-keyframes pulse{50%{opacity:.5}}@keyframes pulse{50%{opacity:.5}}@-webkit-keyframes bounce{0%,to{transform:translateY(-25%);-webkit-animation-timing-function:cubic-bezier(.8,0,1,1);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:none;-webkit-animation-timing-function:cubic-bezier(0,0,.2,1);animation-timing-function:cubic-bezier(0,0,.2,1)}}@keyframes bounce{0%,to{transform:translateY(-25%);-webkit-animation-timing-function:cubic-bezier(.8,0,1,1);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:none;-webkit-animation-timing-function:cubic-bezier(0,0,.2,1);animation-timing-function:cubic-bezier(0,0,.2,1)}}.filter{--tw-blur:var(--tw-empty,/*!*/ /*!*/);--tw-brightness:var(--tw-empty,/*!*/ /*!*/);--tw-contrast:var(--tw-empty,/*!*/ /*!*/);--tw-grayscale:var(--tw-empty,/*!*/ /*!*/);--tw-hue-rotate:var(--tw-empty,/*!*/ /*!*/);--tw-invert:var(--tw-empty,/*!*/ /*!*/);--tw-saturate:var(--tw-empty,/*!*/ /*!*/);--tw-sepia:var(--tw-empty,/*!*/ /*!*/);--tw-drop-shadow:var(--tw-empty,/*!*/ /*!*/);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.leading-tight{line-height:1.3!important;font-weight:400!important}#ads_belowtext>div>iframe,#ads_footer>div>iframe,#ads_intext>div>iframe,#ads_leaderboard>div>iframe,#ads_leaderboard_0>div>iframe,#ads_leaderboard_1>div>iframe,#ads_leaderboard_2>div>iframe,#ads_leaderboard_3>div>iframe,#ads_leaderboard_4>div>iframe,#ads_leaderboard_5>div>iframe,#ads_leaderboard_6>div>iframe,#ads_midtext>div>iframe,#ads_midtext_2>div>iframe,#ads_midtext_3>div>iframe,#ads_rectangle>div>iframe{margin-left:auto;margin-right:auto}.fb_iframe_widget{margin-bottom:20px!important}div#text iframe{max-width:100%}@media (min-width:640px){.sm\:space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.sm\:border-gray-200{--tw-border-opacity:1;border-color:rgba(229,231,235,var(--tw-border-opacity))}.sm\:rounded-lg{border-radius:.5rem}.sm\:border-t{border-top-width:1px}.sm\:border-b{border-bottom-width:1px}.sm\:block{display:block}.sm\:inline-block{display:inline-block}.sm\:grid{display:grid}.sm\:flex-row{flex-direction:row}.sm\:items-start{align-items:flex-start}.sm\:items-center{align-items:center}.sm\:items-baseline{align-items:baseline}.sm\:justify-start{justify-content:flex-start}.sm\:justify-end{justify-content:flex-end}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:h-screen{height:100vh}.sm\:text-sm{font-size:.8rem}.sm\:text-tiny{font-size:.9rem}.sm\:my-8{margin-top:2rem;margin-bottom:2rem}.sm\:mx-auto{margin-left:auto;margin-right:auto}.sm\:mt-0{margin-top:0}.sm\:ml-0{margin-left:0}.sm\:mt-1{margin-top:.25rem}.sm\:mt-2{margin-top:.5rem}.sm\:mt-5{margin-top:1.25rem}.sm\:mt-6{margin-top:1.5rem}.sm\:mt-px{margin-top:1px}.sm\:max-w-xs{max-width:20rem}.sm\:max-w-md{max-width:28rem}.sm\:max-w-lg{max-width:32rem}.sm\:p-0{padding:0}.sm\:p-6{padding:1.5rem}.sm\:px-3{padding-left:.75rem;padding-right:.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:px-10{padding-left:2.5rem;padding-right:2.5rem}.sm\:pt-0{padding-top:0}.sm\:pt-2{padding-top:.5rem}.sm\:pt-5{padding-top:1.25rem}.sm\:pt-10{padding-top:2.5rem}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}.sm\:text-gray-700{--tw-text-opacity:1;color:rgba(55,65,81,var(--tw-text-opacity))}.sm\:align-middle{vertical-align:middle}.sm\:w-64{width:16rem}.sm\:w-full{width:100%}.sm\:gap-3{gap:.75rem}.sm\:gap-4{gap:1rem}.sm\:grid-flow-row-dense{grid-auto-flow:row dense}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:col-span-2{grid-column:span 2/span 2}.sm\:col-start-1{grid-column-start:1}.sm\:col-start-2{grid-column-start:2}}@media (min-width:768px){.md\:space-y-0>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px*var(--tw-space-y-reverse))}.md\:space-x-0>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0px*var(--tw-space-x-reverse));margin-left:calc(0px*(1 - var(--tw-space-x-reverse)))}.md\:space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem*var(--tw-space-y-reverse))}.md\:space-x-3>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem*var(--tw-space-x-reverse));margin-left:calc(0.75rem*(1 - var(--tw-space-x-reverse)))}.md\:bg-black{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.md\:bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.md\:bg-gray-100{--tw-bg-opacity:1;background-color:rgba(243,244,246,var(--tw-bg-opacity))}.md\:bg-gradient-to-t{background-image:linear-gradient(0deg,var(--tw-gradient-stops))}.md\:from-black{--tw-gradient-from:#000;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,transparent)}.md\:via-black{--tw-gradient-stops:var(--tw-gradient-from),#000,var(--tw-gradient-to,transparent)}.md\:border-none{border-style:none}.md\:border-t-0{border-top-width:0}.md\:border-r{border-right-width:1px}.md\:border-b{border-bottom-width:1px}.md\:border-l{border-left-width:1px}.md\:block{display:block}.md\:inline-block{display:inline-block}.md\:inline{display:inline}.md\:flex{display:flex}.md\:grid{display:grid}.md\:hidden{display:none}.md\:flex-row{flex-direction:row}.md\:flex-col{flex-direction:column}.md\:flex-wrap{flex-wrap:wrap}.md\:items-center{align-items:center}.md\:justify-center{justify-content:center}.md\:flex-1{flex:1 1 0%}.md\:order-first{order:-9999}.md\:order-last{order:9999}.md\:font-semibold{font-weight:600}.md\:h-4{height:1rem}.md\:h-5{height:1.25rem}.md\:h-20{height:5rem}.md\:h-100{height:100px}.md\:h-auto{height:auto}.md\:h-full{height:100%}.md\:h-logolg{height:40px}.md\:text-sm{font-size:.8rem}.md\:text-tiny{font-size:.9rem}.md\:text-base{font-size:.95rem}.md\:text-xl{font-size:1.1rem}.md\:text-2xl{font-size:1.5rem}.md\:text-3xl{font-size:1.875rem}.md\:leading-7{line-height:1.75rem}.md\:leading-tight{line-height:1.25}.md\:mx-0{margin-left:0;margin-right:0}.md\:my-2{margin-top:.5rem;margin-bottom:.5rem}.md\:mt-0{margin-top:0}.md\:mb-0{margin-bottom:0}.md\:mt-1{margin-top:.25rem}.md\:mb-1{margin-bottom:.25rem}.md\:mt-2{margin-top:.5rem}.md\:mb-2{margin-bottom:.5rem}.md\:ml-3{margin-left:.75rem}.md\:ml-4{margin-left:1rem}.md\:mt-5{margin-top:1.25rem}.md\:mr-5{margin-right:1.25rem}.md\:mt-10{margin-top:2.5rem}.md\:mb-16{margin-bottom:4rem}.md\:-mt-0{margin-top:0}.md\:p-2{padding:.5rem}.md\:p-3{padding:.75rem}.md\:p-5{padding:1.25rem}.md\:px-0{padding-left:0;padding-right:0}.md\:py-2{padding-top:.5rem;padding-bottom:.5rem}.md\:px-2{padding-left:.5rem;padding-right:.5rem}.md\:py-3{padding-top:.75rem;padding-bottom:.75rem}.md\:px-4{padding-left:1rem;padding-right:1rem}.md\:px-5{padding-left:1.25rem;padding-right:1.25rem}.md\:py-32{padding-top:8rem;padding-bottom:8rem}.md\:pt-0{padding-top:0}.md\:pr-0{padding-right:0}.md\:pb-0{padding-bottom:0}.md\:pl-0{padding-left:0}.md\:pt-1{padding-top:.25rem}.md\:pb-1{padding-bottom:.25rem}.md\:pt-2{padding-top:.5rem}.md\:pb-3{padding-bottom:.75rem}.md\:pl-3{padding-left:.75rem}.md\:pb-4{padding-bottom:1rem}.md\:pr-5{padding-right:1.25rem}.md\:pr-6{padding-right:1.5rem}.md\:pb-2\/3{padding-bottom:66.66667%}.md\:pb-2\/4{padding-bottom:50%}.md\:pb-1\/1{padding-bottom:100%}.md\:pt-smd{padding-top:52px}.md\:pt-smdp{padding-top:57px}.md\:absolute{position:absolute}.md\:sticky{position:sticky}.md\:bottom-0{bottom:0}.md\:top-14{top:3.5rem}.md\:text-center{text-align:center}.md\:text-right{text-align:right}.md\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}.md\:text-gray-200{--tw-text-opacity:1;color:rgba(229,231,235,var(--tw-text-opacity))}.md\:text-gray-400{--tw-text-opacity:1;color:rgba(156,163,175,var(--tw-text-opacity))}.md\:text-gray-500{--tw-text-opacity:1;color:rgba(107,114,128,var(--tw-text-opacity))}.md\:hover\:text-gray-300:hover{--tw-text-opacity:1;color:rgba(209,213,219,var(--tw-text-opacity))}.md\:w-4{width:1rem}.md\:w-5{width:1.25rem}.md\:w-44{width:11rem}.md\:w-728{width:728px}.md\:w-auto{width:auto}.md\:w-full{width:100%}.md\:w-logolg{width:80px}.md\:gap-0{gap:0}.md\:gap-0\.5{gap:.125rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.md\:grid-cols-11{grid-template-columns:repeat(11,minmax(0,1fr))}.md\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.md\:grid-cols-none{grid-template-columns:none}.md\:col-span-1{grid-column:span 1/span 1}.md\:col-span-3{grid-column:span 3/span 3}.md\:col-span-4{grid-column:span 4/span 4}.md\:col-span-5{grid-column:span 5/span 5}.md\:col-span-6{grid-column:span 6/span 6}.md\:col-span-7{grid-column:span 7/span 7}.md\:col-span-8{grid-column:span 8/span 8}.md\:col-span-11{grid-column:span 11/span 11}.md\:col-span-12{grid-column:span 12/span 12}.md\:col-start-4{grid-column-start:4}.md\:row-span-1{grid-row:span 1/span 1}}@media (min-width:1024px){.lg\:prose-lg{font-size:1.125rem;line-height:1.7777778}.lg\:prose-lg p{margin-top:1.3333333em;margin-bottom:1.3333333em}.lg\:prose-lg [class~=lead]{font-size:1.2222222em;line-height:1.4545455;margin-top:1.0909091em;margin-bottom:1.0909091em}.lg\:prose-lg blockquote{margin-top:1.6666667em;margin-bottom:1.6666667em;padding-left:1em}.lg\:prose-lg h1{font-size:2.6666667em;margin-top:0;margin-bottom:.8333333em;line-height:1}.lg\:prose-lg h2{font-size:1.6666667em;margin-top:1.8666667em;margin-bottom:1.0666667em;line-height:1.3333333}.lg\:prose-lg h3{font-size:1.3333333em;margin-top:1.6666667em;margin-bottom:.6666667em;line-height:1.5}.lg\:prose-lg h4{margin-top:1.7777778em;margin-bottom:.4444444em;line-height:1.5555556}.lg\:prose-lg figure,.lg\:prose-lg img,.lg\:prose-lg video{margin-top:1.7777778em;margin-bottom:1.7777778em}.lg\:prose-lg figure>*{margin-top:0;margin-bottom:0}.lg\:prose-lg figure figcaption{font-size:.8888889em;line-height:1.5;margin-top:1em}.lg\:prose-lg code{font-size:.8888889em}.lg\:prose-lg h2 code{font-size:.8666667em}.lg\:prose-lg h3 code{font-size:.875em}.lg\:prose-lg pre{font-size:.8888889em;line-height:1.75;margin-top:2em;margin-bottom:2em;border-radius:.375rem;padding:1em 1.5em}.lg\:prose-lg ol,.lg\:prose-lg ul{margin-top:1.3333333em;margin-bottom:1.3333333em}.lg\:prose-lg li{margin-top:.6666667em;margin-bottom:.6666667em}.lg\:prose-lg ol>li{padding-left:1.6666667em}.lg\:prose-lg ol>li:before{left:0}.lg\:prose-lg ul>li{padding-left:1.6666667em}.lg\:prose-lg ul>li:before{width:.3333333em;height:.3333333em;top:.72222em;left:.2222222em}.lg\:prose-lg>ul>li p{margin-top:.8888889em;margin-bottom:.8888889em}.lg\:prose-lg>ul>li>:first-child{margin-top:1.3333333em}.lg\:prose-lg>ul>li>:last-child{margin-bottom:1.3333333em}.lg\:prose-lg>ol>li>:first-child{margin-top:1.3333333em}.lg\:prose-lg>ol>li>:last-child{margin-bottom:1.3333333em}.lg\:prose-lg ol ol,.lg\:prose-lg ol ul,.lg\:prose-lg ul ol,.lg\:prose-lg ul ul{margin-top:.8888889em;margin-bottom:.8888889em}.lg\:prose-lg hr{margin-top:3.1111111em;margin-bottom:3.1111111em}.lg\:prose-lg h2+*,.lg\:prose-lg h3+*,.lg\:prose-lg h4+*,.lg\:prose-lg hr+*{margin-top:0}.lg\:prose-lg table{font-size:.8888889em;line-height:1.5}.lg\:prose-lg thead th{padding-right:.75em;padding-bottom:.75em;padding-left:.75em}.lg\:prose-lg thead th:first-child{padding-left:0}.lg\:prose-lg thead th:last-child{padding-right:0}.lg\:prose-lg tbody td{padding:.75em}.lg\:prose-lg tbody td:first-child{padding-left:0}.lg\:prose-lg tbody td:last-child{padding-right:0}.lg\:prose-lg>:first-child{margin-top:0}.lg\:prose-lg>:last-child{margin-bottom:0}.lg\:space-x-0>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0px*var(--tw-space-x-reverse));margin-left:calc(0px*(1 - var(--tw-space-x-reverse)))}.lg\:space-x-3>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem*var(--tw-space-x-reverse));margin-left:calc(0.75rem*(1 - var(--tw-space-x-reverse)))}.lg\:space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.lg\:space-x-5>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.25rem*var(--tw-space-x-reverse));margin-left:calc(1.25rem*(1 - var(--tw-space-x-reverse)))}.lg\:divide-y-0>:not([hidden])~:not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(0px*(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(0px*var(--tw-divide-y-reverse))}.lg\:divide-x>:not([hidden])~:not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(1px*var(--tw-divide-x-reverse));border-left-width:calc(1px*(1 - var(--tw-divide-x-reverse)))}.lg\:bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.lg\:border-gray-200{--tw-border-opacity:1;border-color:rgba(229,231,235,var(--tw-border-opacity))}.lg\:border-r{border-right-width:1px}.lg\:border-l{border-left-width:1px}.lg\:block{display:block}.lg\:inline-block{display:inline-block}.lg\:inline{display:inline}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:flex-row{flex-direction:row}.lg\:flex-col{flex-direction:column}.lg\:order-none{order:0}.lg\:font-semibold{font-weight:600}.lg\:h-3{height:.75rem}.lg\:h-4{height:1rem}.lg\:h-8{height:2rem}.lg\:h-20{height:5rem}.lg\:h-250{height:250px}.lg\:h-600{height:600px}.lg\:h-auto{height:auto}.lg\:h-logolg{height:40px}.lg\:text-sm{font-size:.8rem}.lg\:text-tiny{font-size:.9rem}.lg\:text-base{font-size:.95rem}.lg\:text-lg{font-size:1.05rem}.lg\:text-xl{font-size:1.1rem}.lg\:text-2xl{font-size:1.5rem}.lg\:text-3xl{font-size:1.875rem}.lg\:text-4xl{font-size:2.2rem}.lg\:leading-6{line-height:1.5rem}.lg\:mx-12{margin-left:3rem;margin-right:3rem}.lg\:mt-0{margin-top:0}.lg\:mr-0{margin-right:0}.lg\:mb-0{margin-bottom:0}.lg\:ml-0{margin-left:0}.lg\:mr-1{margin-right:.25rem}.lg\:mt-2{margin-top:.5rem}.lg\:mr-2{margin-right:.5rem}.lg\:ml-2{margin-left:.5rem}.lg\:mt-3{margin-top:.75rem}.lg\:mr-3{margin-right:.75rem}.lg\:ml-3{margin-left:.75rem}.lg\:mt-5{margin-top:1.25rem}.lg\:mb-5{margin-bottom:1.25rem}.lg\:ml-5{margin-left:1.25rem}.lg\:-mr-5{margin-right:-1.25rem}.lg\:-ml-5{margin-left:-1.25rem}.lg\:p-0{padding:0}.lg\:p-3{padding:.75rem}.lg\:p-5{padding:1.25rem}.lg\:py-0{padding-top:0;padding-bottom:0}.lg\:px-0{padding-left:0;padding-right:0}.lg\:px-2{padding-left:.5rem;padding-right:.5rem}.lg\:py-3{padding-top:.75rem;padding-bottom:.75rem}.lg\:px-3{padding-left:.75rem;padding-right:.75rem}.lg\:px-5{padding-left:1.25rem;padding-right:1.25rem}.lg\:py-6{padding-top:1.5rem;padding-bottom:1.5rem}.lg\:py-8{padding-top:2rem;padding-bottom:2rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:py-16{padding-top:4rem;padding-bottom:4rem}.lg\:px-24{padding-left:6rem;padding-right:6rem}.lg\:px-36{padding-left:9rem;padding-right:9rem}.lg\:pt-0{padding-top:0}.lg\:pr-0{padding-right:0}.lg\:pb-0{padding-bottom:0}.lg\:pt-1{padding-top:.25rem}.lg\:pb-2{padding-bottom:.5rem}.lg\:pt-3{padding-top:.75rem}.lg\:pb-3{padding-bottom:.75rem}.lg\:pl-3{padding-left:.75rem}.lg\:pt-4{padding-top:1rem}.lg\:pl-4{padding-left:1rem}.lg\:pt-5{padding-top:1.25rem}.lg\:pl-5{padding-left:1.25rem}.lg\:pt-8{padding-top:2rem}.lg\:pb-0\.5{padding-bottom:.125rem}.lg\:pb-2\/3{padding-bottom:66.66667%}.lg\:top-16{top:4rem}.lg\:text-center{text-align:center}.lg\:w-3{width:.75rem}.lg\:w-4{width:1rem}.lg\:w-8{width:2rem}.lg\:w-160{width:160px}.lg\:w-728{width:728px}.lg\:w-1\/2{width:50%}.lg\:w-full{width:100%}.lg\:w-logolg{width:80px}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.lg\:grid-cols-11{grid-template-columns:repeat(11,minmax(0,1fr))}.lg\:col-span-2{grid-column:span 2/span 2}.lg\:col-span-3{grid-column:span 3/span 3}.lg\:col-span-4{grid-column:span 4/span 4}.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-6{grid-column:span 6/span 6}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:col-span-8{grid-column:span 8/span 8}.lg\:col-start-1{grid-column-start:1}.lg\:col-start-3{grid-column-start:3}.lg\:col-start-8{grid-column-start:8}.lg\:row-span-1{grid-row:span 1/span 1}.lg\:row-span-2{grid-row:span 2/span 2}.lg\:row-start-1{grid-row-start:1}}@media (min-width:1280px){.xl\:border-vijesti{--tw-border-opacity:1;border-color:rgba(211,61,61,var(--tw-border-opacity))}.xl\:border-lifestyle{--tw-border-opacity:1;border-color:rgba(226,166,0,var(--tw-border-opacity))}.xl\:border-biznis{--tw-border-opacity:1;border-color:rgba(239,111,62,var(--tw-border-opacity))}.xl\:border-sport{--tw-border-opacity:1;border-color:rgba(85,172,83,var(--tw-border-opacity))}.xl\:border-magazin{--tw-border-opacity:1;border-color:rgba(164,80,145,var(--tw-border-opacity))}.xl\:border-auto{--tw-border-opacity:1;border-color:rgba(72,123,175,var(--tw-border-opacity))}.xl\:border-scitech{--tw-border-opacity:1;border-color:rgba(64,175,238,var(--tw-border-opacity))}.xl\:border-b-4{border-bottom-width:4px}.xl\:block{display:block}.xl\:inline{display:inline}.xl\:hidden{display:none}.xl\:text-tiny{font-size:.9rem}.xl\:text-base{font-size:.95rem}.xl\:text-lg{font-size:1.05rem}.xl\:text-xl{font-size:1.1rem}.xl\:text-4xl{font-size:2.2rem}.xl\:mx-2{margin-left:.5rem;margin-right:.5rem}.xl\:mx-3{margin-left:.75rem;margin-right:.75rem}.xl\:mx-12{margin-left:3rem;margin-right:3rem}.xl\:mt-1{margin-top:.25rem}.xl\:mr-2{margin-right:.5rem}.xl\:mt-3{margin-top:.75rem}.xl\:mb-5{margin-bottom:1.25rem}.xl\:ml-10{margin-left:2.5rem}.xl\:p-2{padding:.5rem}.xl\:p-5{padding:1.25rem}.xl\:py-0{padding-top:0;padding-bottom:0}.xl\:px-0{padding-left:0;padding-right:0}.xl\:py-1{padding-top:.25rem;padding-bottom:.25rem}.xl\:px-2{padding-left:.5rem;padding-right:.5rem}.xl\:py-3{padding-top:.75rem;padding-bottom:.75rem}.xl\:px-3{padding-left:.75rem;padding-right:.75rem}.xl\:px-4{padding-left:1rem;padding-right:1rem}.xl\:px-16{padding-left:4rem;padding-right:4rem}.xl\:pt-0{padding-top:0}.xl\:pr-0{padding-right:0}.xl\:pl-2{padding-left:.5rem}.xl\:pt-4{padding-top:1rem}.xl\:pt-5{padding-top:1.25rem}.xl\:w-300{width:300px}.xl\:w-970{width:970px}.xl\:col-span-3{grid-column:span 3/span 3}.xl\:col-span-6{grid-column:span 6/span 6}.xl\:col-span-8{grid-column:span 8/span 8}.xl\:col-start-1{grid-column-start:1}.xl\:col-start-9{grid-column-start:9}}</style>
+<link rel="shortcut icon" href="https://static.klix.ba/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="https://static.klix.ba/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://static.klix.ba/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://static.klix.ba/favicons/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preconnect" href="https://static.klix.ba" crossorigin>
+<link rel="dns-prefetch" href="https://static.klix.ba">
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="https://adservice.google.com/">
+<link rel="preconnect" href="https://googleads.g.doubleclick.net/">
+<link rel="preconnect" href="https://www.googletagservices.com/">
+<link rel="preconnect" href="https://tpc.googlesyndication.com/">
+<link rel="preconnect" href="https://api.klix.ba" crossorigin>
+<meta property="fb:app_id" content="171222711838">
+<meta name="csrf-token" content="s2YZIOEDCda2q2cnKSKzAJthIFHQ6cjPtV547mQC">
+<meta name="google" content="notranslate" />
+<script type="text/javascript">
+    /**
+     * Add an event listener to get notified once Didomi has passed
+     * the user consent status to Google
+     * Important: this must be placed before the Didomi SDK gets embedded on your
+     * website to guarantee that you do not miss any event
+     */
+    window.didomiEventListeners = window.didomiEventListeners || [];
+    window.didomiEventListeners.push({
+        event: 'integrations.consentpassedtodfp',
+        listener: function (data) {
+            // Consent has been passed to Google
+            // Load or refresh ads as needed with Ad Manager, Prebid, etc.
+            // `data.consentStatus` contains the current consent status of the user (true/false/undefined)
+            // `data.index` contains the index of the event (integer)
+            console.log("data.index: "+ data.index);
+            if (data.index === 0) {
+                // This is the very first event on the page that gets triggered on page load
+                //googletag.pubads().refresh();
+                //initializeGoogletagRefreshWithPrebid();
+            } else {
+                // This is an event that happens later on the page, after a user action (user giving consent or changing their preferences)
+                googletag.pubads().refresh();
+            }
+        }
+    });
+</script>
+<script type="text/javascript">window.gdprAppliesGlobally=false;(function(){function a(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var n=document.createElement("iframe");n.style.display="none";n.name=e;n.title=e;t.insertBefore(n,t.firstChild)}
+    else{setTimeout(function(){a(e)},5)}}}function e(n,r,o,c,s){function e(e,t,n,a){if(typeof n!=="function"){return}if(!window[r]){window[r]=[]}var i=false;if(s){i=s(e,t,n)}if(!i){window[r].push({command:e,parameter:t,callback:n,version:a})}}e.stub=true;function t(a){if(!window[n]||window[n].stub!==true){return}if(!a.data){return}
+        var i=typeof a.data==="string";var e;try{e=i?JSON.parse(a.data):a.data}catch(t){return}if(e[o]){var r=e[o];window[n](r.command,r.parameter,function(e,t){var n={};n[c]={returnValue:e,success:t,callId:r.callId};a.source.postMessage(i?JSON.stringify(n):n,"*")},r.version)}}
+        if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");a("__tcfapiLocator");(function(e){
+        var t=document.createElement("script");t.id="spcloader";t.type="text/javascript";t.async=true;t.src="https://sdk.privacy-center.org/"+e+"/loader.js?target="+document.location.hostname;t.charset="utf-8";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)})("76f2bacf-f777-4af7-9a2a-73e9e630ac7c")})();</script>
+<script type="text/javascript">
+    var PWT={}; //Initialize Namespace
+    var notifyId;
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    var gptRan = false;
+    PWT.jsLoaded = function(){ //PubMatic pwt.js on load callback is used to load GPT
+        loadGPT();
+    };
+    var loadGPT = function() {
+        // Check the gptRan flag
+        if (!gptRan) {
+            gptRan = true;
+            var gads = document.createElement('script');
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        }
+    };
+    // Failsafe to call gpt
+    setTimeout(loadGPT, 500);
+</script>
+<script type="text/javascript">
+    (function() {
+        var purl = window.location.href;
+        var url = '//ads.pubmatic.com/AdServer/js/pwt/160800/6119';
+        var profileVersionId = '';
+        if(purl.indexOf('pwtv=')>0){
+            var regexp = /pwtv=(.*?)(&|$)/g;
+            var matches = regexp.exec(purl);
+            if(matches.length >= 2 && matches[1].length > 0){
+                profileVersionId = '/'+matches[1];
+            }
+        }
+        var wtads = document.createElement('script');
+        wtads.async = true;
+        wtads.type = 'text/javascript';
+        wtads.src = url+profileVersionId+'/pwt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(wtads, node);
+    })();
+</script>
+<script>
+    //load the apstag.js library
+    !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+
+    //initialize the apstag.js library on the page to allow bidding
+    apstag.init({
+        pubID: '948f8c76-6cb2-49d2-aef8-03f115c39dbc', //enter your pub ID here as shown above, it must within quotes
+        adServer: 'googletag'
+    });
+    window.__tcfapi('addEventListener', 2, function(tcData, listenerSuccess) {
+        if (listenerSuccess) {
+            // check the eventstatus
+            if (tcData.eventStatus === 'useractioncomplete' ||
+                tcData.eventStatus === 'tcloaded') {
+                // Execute things here that rely on the TC string being available (fetchBids request)
+                console.log("tcloaded");
+                apstag.fetchBids({
+                    slots: [
+                        {
+                            slotID: 'ads_rectangle',
+                            slotName: '/1000270/Rectangle',
+                            sizes: [[300,600],[300,250]]
+                        },
+                        {
+                            slotID: 'ads_leaderboard',
+                            slotName: '/1000270/Leaderboard',
+                            sizes: [[970,100],[970,250],[728,90],[336,280],[300,250],[300,100]]
+                        },
+                        {
+                            slotID: 'ads_footer',
+                            slotName: '/1000270/Footer',
+                            sizes: [[970,100],[970,250],[728,90],[336,280],[300,250],[300,100]]
+                        },
+                                                    {
+                            slotID: 'ads_intext',
+                            slotName: '/1000270/Banner-InText',
+                            sizes: [[300,250], [336,280]]
+                        },
+                                                                                {
+                            slotID: 'ads_belowtext',
+                            slotName: '/1000270/BelowText',
+                            sizes: [[300,250], [336,280], [300,600]]
+                        },
+                        {
+                            slotID: 'ads_midtext',
+                            slotName: '/1000270/Mid-Text',
+                            sizes: [[300,250], [336,280], [300,600]]
+                        },
+                        {
+                            slotID: 'ads_midtext_2',
+                            slotName: '/1000270/Mid-Text-2',
+                            sizes: [[300,250], [336,280], [300,600]]
+                        },
+                        {
+                            slotID: 'ads_midtext_3',
+                            slotName: '/1000270/Mid-Text-3',
+                            sizes: [[300,250], [336,280], [300,600]]
+                        },
+                        {
+                            slotID: 'ads_skyscraper',
+                            slotName: '/1000270/Skyscraper',
+                            sizes: [[160,600]]
+                        },
+                                                                            ],
+                    timeout: 2e3
+                }, function(bids) {
+                    // set apstag targeting on googletag, then trigger the first GAM request in googletag's disableInitialLoad integration
+                    googletag.cmd.push(function(){
+                        apstag.setDisplayBids();
+                        //googletag.pubads().refresh();
+                                                window.OWT.notifyExternalBiddingComplete(notifyId); // This will tell OpenWrap that all the external bidders have returned bid.
+                                            });
+                });
+            }
+        }
+    });
+
+
+</script>
+<script type="text/javascript">
+
+</script>
+<script>
+    var anchorSlot, interstitialSlot;
+
+    googletag.cmd.push(function() {
+
+        var REFRESH_KEY = 'refresh';
+        var REFRESH_VALUE = 'true';
+        var SECONDS_TO_WAIT_AFTER_VIEWABILITY = 40;
+
+        
+        //size mappings
+        var leaderboardsMapping = googletag.sizeMapping()
+            .addSize([1200, 0], [[970, 500], [970, 250], [970, 100], [970, 90], [960, 250], [960, 100], [960, 100], [960, 90]])
+            .addSize([1024, 0], [[970, 250], [970, 100], [970, 90], [960, 250], [960, 100], [960, 100], [960, 90]])
+            .addSize([768, 0], [[728, 90],'fluid'])
+            .addSize([360, 0], [[320,100],[300,250],[336,280],'fluid'])
+            .addSize([0, 0], [[300, 250],[320,100],'fluid'])
+            .build();
+
+        var fixniMapping = googletag.sizeMapping()
+            .addSize([1200, 0], [/*[970, 500],*/ [970, 250], [970, 100],'fluid'])
+            .addSize([1024, 0], [[970, 250], [960, 100], [960, 90],[728, 90],'fluid'])
+            .addSize([768, 0], [[728, 90],'fluid'])
+            .addSize([360, 0], [[320,100],[300,250],[336,280],[300,600],'fluid'])
+            .addSize([0, 0], [[300, 250],[320,100],'fluid'])
+            .build();
+
+        var rectangleMapping = googletag.sizeMapping()
+            .addSize([1180, 0], [[300,600],[300,250] ,'fluid'])
+            .addSize([740, 0], [[160,600] ,'fluid'])
+            .addSize([360, 0], [[300, 250],[336, 280],[300,600] ,'fluid']) //mobile
+            .addSize([0, 0], [300, 250])
+            .build();
+
+        var skyscraperMapping = googletag.sizeMapping()
+            .addSize([1200, 0], [[160, 600],[120, 600]])
+            .addSize([1024, 0], [[120, 600]])
+            .addSize([768, 0], [[160, 600],[120, 600]])
+            .addSize([0, 0], [])
+            .build();
+
+        var intextMapping = googletag.sizeMapping().
+        addSize([1250, 0], [[300, 250],[336, 280], [500,400], 'fluid']). //desktop
+            addSize([1024, 0], [[300, 250],[336, 280], [500,400], 'fluid']). //desktop
+            addSize([360, 0], [[300, 250],[336, 280],'fluid']). //mobile
+            addSize([0, 0], [[300, 250],'fluid']). //others - mobile small screen
+            build();
+
+        var midtextMapping = googletag.sizeMapping().
+        addSize([1250, 0], [[300, 250],[336, 280], [300, 600], 'fluid']). //desktop
+            addSize([1024, 0], [[300, 250],[336, 280], [300, 600], 'fluid']). //desktop
+            addSize([360, 0], [[300, 250],[336, 280],[300, 600],'fluid']). //mobile
+            addSize([0, 0], [[300, 250],'fluid']). //others - mobile small screen
+            build();
+
+        var btMapping = googletag.sizeMapping().
+        addSize([1250, 0], [[300, 250],[336, 280], 'fluid']). //desktop
+            addSize([1024, 0], [[300, 250],[336, 280], 'fluid']). //desktop
+            addSize([360, 0], [[300, 250],[336, 280],[300,600],'fluid']). //mobile
+            addSize([0, 0], [[300, 250],'fluid']). //others - mobile small screen
+            build();
+
+        googletag.defineSlot('/1000270/Leaderboard', [[970, 500],[970,100],[970,250],[728,90],[336,280],[300,250],[300,100]], 'ads_leaderboard')
+            .setForceSafeFrame(false)
+            .defineSizeMapping(leaderboardsMapping)
+            .addService(googletag.pubads());
+
+        googletag.defineSlot('/1000270/Rectangle', [[300,250],'fluid'], 'ads_rectangle')
+            .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+            .setForceSafeFrame(false)
+            .defineSizeMapping(rectangleMapping)
+            .addService(googletag.pubads());
+
+
+        
+
+        
+        
+        
+        
+        
+        
+                googletag.defineSlot('/1000270/Banner-InText', ['fluid',[500,400],[336,280],[300,250],[300,100]], 'ads_intext')
+            .setForceSafeFrame(false)
+            .defineSizeMapping(intextMapping)
+            .addService(googletag.pubads());
+
+                googletag.defineSlot('/1000270/BelowText', ['fluid',[336,280],[300,250],[300,100],[300,600]], 'ads_belowtext')
+            .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+            .setForceSafeFrame(false)
+            .defineSizeMapping(btMapping)
+            .addService(googletag.pubads());
+        
+                googletag.defineSlot('/1000270/Skyscraper', [[160, 600],[120, 600]], 'ads_skyscraper')
+            .setTargeting(REFRESH_KEY, REFRESH_VALUE)
+            .setForceSafeFrame(false)
+            .defineSizeMapping(skyscraperMapping)
+            .addService(googletag.pubads());
+        
+        
+        
+        
+        googletag.defineOutOfPageSlot('/1000270/Out-Of-Page', 'ads_outofpage').addService(googletag.pubads());
+
+        anchorSlot = googletag.defineOutOfPageSlot(
+            '/1000270/Bottom',
+            googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR);
+        if (anchorSlot) anchorSlot.addService(googletag.pubads());
+
+        
+        // Register event handlers to observe lazy loading behavior.
+        googletag.pubads().addEventListener('slotRequested', function(event) {
+            //console.log(event.slot.getSlotElementId() + ' fetched.');
+        });
+
+        googletag.pubads().addEventListener('slotOnload', function(event) {
+            console.log(event.slot.getSlotElementId() + ' rendered.');
+        });
+
+
+
+        googletag.pubads().addEventListener('impressionViewable', function(event) {
+            var slot = event.slot;
+            if (slot.getTargeting(REFRESH_KEY).indexOf(REFRESH_VALUE) > -1) {
+                setTimeout(function() {
+                    googletag.pubads().refresh([slot]);
+                    console.log("refreshing slot" + slot.getAdUnitPath())
+                }, SECONDS_TO_WAIT_AFTER_VIEWABILITY * 1000);
+            }
+        });
+
+         //promo==true & google_ads=off
+
+        interstitialSlot = googletag.defineOutOfPageSlot(
+            '/1000270/WebInterstitial',
+            googletag.enums.OutOfPageFormat.INTERSTITIAL);
+
+        // Slot returns null if the page or device does not support interstitials.
+        if (interstitialSlot) {
+            interstitialSlot.addService(googletag.pubads());
+
+            //console.log('Interstitial is loading...');
+
+            // Add event listener to enable navigation once the interstitial loads.
+            // If this event doesn't fire, try clearing local storage and refreshing
+            // the page.
+            googletag.pubads().addEventListener('slotOnload', function(event) {
+                if (interstitialSlot === event.slot) {
+                    console.log('Interstitial is loaded');
+                }
+            });
+        }
+
+                googletag.pubads().setTargeting('referer', 'google');
+                googletag.pubads().setTargeting('Stranica', 'Članak');
+                googletag.pubads().setTargeting('ClanakID', '160724063');
+                googletag.pubads().setTargeting('Autor', 'Adisa Pobrić');
+                googletag.pubads().setTargeting('Kategorija', 'Magazin');
+                googletag.pubads().setTargeting('Segment', 'Magazin');
+                googletag.pubads().setTargeting('Podkategorija', 'Kultura');
+                googletag.pubads().setTargeting('Tagovi', ["umjetnost","Po\u010ditelj","likovna kolonija","ULUBiH","Admir Mujki\u0107"]);
+        
+                googletag.pubads().setTargeting("regija", "1");
+        
+        googletag.pubads().setTargeting('Platform', getVersion());
+
+        if (isFacebookApp()) {
+            googletag.pubads().setTargeting('FBInAppBrowser', ['Yes']);
+        }
+
+        
+                        notifyId = window.OWT.registerExternalBidders(['ads_leaderboard', 'ads_rectangle','ads_leaderboard_0','ads_leaderboard_1','ads_leaderboard_2','ads_leaderboard_3']); // Notifies OpenWrap that there are some external bidders for which it has to wait before calling GAM.
+            
+        //googletag.pubads().setLocation(43.8552809,18.3994571);
+        googletag.pubads().collapseEmptyDivs();
+        googletag.pubads().setForceSafeFrame(false);
+        googletag.pubads().setCentering(true);
+        googletag.pubads().enableSingleRequest();
+
+        googletag.pubads().addEventListener('slotRenderEnded', renderEnded);
+        googletag.enableServices();
+    });
+
+    function renderEnded(e){
+        if (e.slot.getSlotElementId() == "ads_rectangle") {
+            if (e.isEmpty) {
+                document.getElementById("ads_rectangle").style.minHeight = "0";
+                document.getElementById("ads_rectangle").style.display = "none";
+            }
+        }
+    }
+
+    function getVersion() {
+        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        if(width >= 980) {
+            return 'Desktop';
+        } else if(width >= 740) {
+            return 'Tablet';
+        } else {
+            return 'Mobile';
+        }
+    }
+
+    function isFacebookApp() {
+        var ua = navigator.userAgent || navigator.vendor || window.opera;
+        return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+    }
+
+
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-63707-9"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-63707-9', {
+            });
+</script>
+<script async type="text/javascript">
+    /* <![CDATA[ */
+    (function() {
+        window.dm=window.dm||{AjaxData:[]},window.dm.AjaxEvent=function(et,d){dm.AjaxData.push({et:et,d:d}),window.DotMetricsObj&&DotMetricsObj.onAjaxDataUpdate()};
+        var d=document,
+            h=d.getElementsByTagName('head')[0],
+            s=d.createElement('script');
+        s.type='text/javascript';
+        s.async=true;
+        s.src=document.location.protocol + '//script.dotmetrics.net/door.js?id=1292';
+        h.appendChild(s);
+    }());
+    /* ]]> */
+</script>
+<script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement("script"); s.src = "//delivery.adrecover.com/42574/adRecover.js"; s.type = "text/javascript"; s.async = true; (d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0]).appendChild(s); })(window, document);</script>
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.klix.ba/magazin/kultura/likovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic/160724063">
+<link rel="preload" href="https://static.klix.ba/media/images/vijesti/b_160724063.jpg?v=1" as="image">
+<link rel="canonical" href="https://www.klix.ba/magazin/kultura/likovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic/160724063" />
+<meta name="robots" content="max-image-preview:large">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.klix.ba"
+      },
+      "headline": "Likovna kolonija u Počitelju ponovo oživjela živopisni hercegovački gradić",
+      "image": [            "https://static.klix.ba/media/images/vijesti/b_160724063.jpg?v=1"
+                   ],
+      "datePublished": "2016-07-24T13:50:00Z",
+      "dateModified": "2016-07-24T13:50:00Z",
+              "author": {
+        "@type": "Person",
+        "name": "Adisa Pobrić"
+      },
+             "publisher": {
+        "@type": "Organization",
+        "name": "Klix.ba",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://static.klix.ba/logo/logo.png"
+        }
+      }
+    }
+    </script>
+<meta name="publish-date" content="2016-07-24T13:50:00Z">
+
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "ImageGallery",
+      "description": "Likovna kolonija u Počitelju ponovo oživjela živopisni hercegovački gradić",
+
+      "associatedMedia": [
+
+                    {
+                "@type": "ImageObject",
+                "contentUrl": "https://static.klix.ba/media/images/vijesti/160724063.6_mn.jpg?v=1",
+                "caption": ""
+            }
+             ,                    {
+                "@type": "ImageObject",
+                "contentUrl": "https://static.klix.ba/media/images/vijesti/160724063.1_mn.jpg?v=1",
+                "caption": ""
+            }
+             ,                    {
+                "@type": "ImageObject",
+                "contentUrl": "https://static.klix.ba/media/images/vijesti/160724063.5_mn.jpg?v=1",
+                "caption": ""
+            }
+             ,                    {
+                "@type": "ImageObject",
+                "contentUrl": "https://static.klix.ba/media/images/vijesti/160724063.7_mn.jpg?v=1",
+                "caption": ""
+            }
+             ,                    {
+                "@type": "ImageObject",
+                "contentUrl": "https://static.klix.ba/media/images/vijesti/160724063.8_xl.jpg?v=1",
+                "caption": ""
+            }
+             ,                    {
+                "@type": "ImageObject",
+                "contentUrl": "https://static.klix.ba/media/images/vijesti/160724063.4_mn.jpg?v=1",
+                "caption": ""
+            }
+             ,                    {
+                "@type": "ImageObject",
+                "contentUrl": "https://static.klix.ba/media/images/vijesti/160724063.3_mn.jpg?v=1",
+                "caption": ""
+            }
+             ,                    {
+                "@type": "ImageObject",
+                "contentUrl": "https://static.klix.ba/media/images/vijesti/160724063.2_mn.jpg?v=1",
+                "caption": ""
+            }
+                     
+        ]
+      }
+    </script>
+
+<link rel="stylesheet" href="/css/photoswipe.css">
+
+<link rel="stylesheet" href="/css/default-skin/default-skin.css">
+
+<script src="/js/photoswipe.min.js" async></script>
+
+<script src="/js/photoswipe-ui-default.min.js" async></script>
+<style type="text/css">
+        .twitter-tweet, .instagram-media { margin:20px auto !important; max-width:450px !important; }
+
+            </style>
+<script type="text/javascript">
+            var pix = document.createElement("img");
+            pix.src = "https://image6.pubmatic.com/AdServer/UCookieSetPug?rd=https%3A//aud.pubmatic.com/AdServer/Artemis%3Fdpid%3D695%26addseg%3D1637661236746";
+        </script>
+</head>
+<body class="antialiased text-gray-900 bg-gray-100">
+<header class="fixed z-50 w-full bg-white items-center px-4 xl:px-0 py-1 md:py-2 pr-0
+    border-b border-gray-200 xl:border-b-4
+     xl:border-magazin
+        text-sm">
+<div class="flex justify-between items-center max-w-7xl mx-auto lg:px-5">
+<div class="w-20 md:w-auto ml-0 flex-none md:order-last flex justify-items-center">
+<button onclick="toggleNav()" type="button" id="sidebar-open" class="p-3 pl-0 xl:pr-0 m-0 flex items-center text-gray-600 focus:outline-none focus:text-gray-800" aria-label="Open site navigation"><svg class="fill-current w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></button>
+<button onclick="toggleNav()" type="button" id="sidebar-close" class="p-3 pl-0 xl:pr-0 m-0 flex items-center text-gray-600 focus:outline-none focus:text-gray-800 hidden" aria-label="Close site navigation"><svg class="fill-current w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"></path></svg></button>
+<a href="/koronavirus-u-bih" class="md:hidden ml-3 text-gray-500 flex items-center ">
+<svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" color="currentColor"><path d="M20.763 10.377c-.694.519-1.537.801-2.403.801-1.607 0-2.415-1.963-1.282-3.095.614-.615 1.406-1.009 2.266-1.133 1.621-.233 2.334-2.244 1.142-3.437s-3.203-.479-3.437 1.142c-.123.857-.52 1.653-1.132 2.266-1.138 1.138-3.095.329-3.095-1.282 0-.869.28-1.708.801-2.403.983-1.312.061-3.236-1.623-3.236-1.683 0-2.606 1.923-1.623 3.237.519.693.801 1.537.801 2.403 0 1.61-1.956 2.421-3.095 1.282-.614-.614-1.008-1.405-1.132-2.266-.233-1.621-2.243-2.334-3.436-1.141s-.48 3.203 1.141 3.436c.857.123 1.653.52 2.266 1.132 1.138 1.139.329 3.095-1.282 3.095-.869 0-1.707-.28-2.403-.801-1.313-.983-3.237-.061-3.237 1.623 0 1.683 1.923 2.606 3.237 1.623.693-.519 1.537-.801 2.403-.801 1.61 0 2.421 1.956 1.282 3.095-.614.615-1.406 1.009-2.266 1.133-1.621.233-2.334 2.244-1.142 3.437s3.203.479 3.437-1.142c.123-.857.52-1.653 1.132-2.266 1.139-1.138 3.095-.329 3.095 1.282 0 .869-.28 1.708-.801 2.404-.981 1.308-.064 3.235 1.623 3.235 1.677 0 2.611-1.919 1.621-3.24-.518-.689-.799-1.528-.799-2.39 0-1.615 1.957-2.432 3.095-1.293.615.615 1.009 1.406 1.133 2.267.233 1.621 2.244 2.334 3.437 1.142 1.19-1.19.483-3.206-1.146-3.437-.854-.121-1.646-.515-2.255-1.125-1.143-1.141-.337-3.102 1.274-3.102.87 0 1.708.28 2.404.801 1.309.981 3.236.064 3.236-1.623 0-1.686-1.926-2.605-3.237-1.623zm-10.728 4.296c-.547 0-.99-.443-.99-.99s.443-.99.99-.99.99.443.99.99-.443.99-.99.99zm1.262-3.143c-.858 0-1.553-.695-1.553-1.553s.695-1.553 1.553-1.553 1.553.695 1.553 1.553-.695 1.553-1.553 1.553zm2.928 2.969c-.727 0-1.315-.589-1.315-1.315s.589-1.315 1.315-1.315 1.315.589 1.315 1.315-.589 1.315-1.315 1.315z" /></svg>
+</a>
+</div>
+<div class="flex-1 flex items-center">
+<div class="mx-auto md:mx-0 md:pb-1">
+<a href="/" id="logo" title="Klix.ba">
+<svg class="h-logo w-logo lg:w-logolg lg:h-logolg xl:mr-2" id="logo" data-name="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.93 24"><defs><style>.cls-1{fill:#1599c9;}.cls-2,.cls-3{fill:#6a696e;}.cls-3{fill-rule:evenodd;}</style></defs><title>Klix logo</title><polygon class="cls-1" points="42.81 4.37 38.48 8.69 43.98 14.18 38.48 19.68 42.81 24 52.63 14.18 42.81 4.37" /><rect class="cls-2" x="29.44" y="4.74" width="6.32" height="18.95" /><rect class="cls-2" x="20.33" width="6.32" height="23.68" /><rect class="cls-2" width="6.32" height="23.68" /><polygon class="cls-3" points="17.86 8.76 13.58 4.47 8.08 9.97 3.8 14.25 8.08 18.54 13.24 23.7 17.53 23.7 17.53 19.41 12.37 14.25 17.86 8.76" /><polygon class="cls-2" points="57.93 8.69 53.18 13.56 48.86 9.24 53.6 4.37 57.93 8.69" /><polygon class="cls-2" points="48.86 19.12 53.6 24 57.93 19.68 53.18 14.8 48.86 19.12" /></svg>
+</a>
+</div>
+<form id="search" action="/pretraga" method="GET" role="search" class="px-1 py-0 flex-1 my-0 mx-4 bg-gray-200 w-full rounded-md hidden">
+<div class="flex items-center">
+<button type="submit" class="pl-2 pointer-events-none flex items-center"><svg class="fill-current pointer-events-none text-gray-600 w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path></svg></button>
+<input type="text" class="flex-1 bg-gray-200 px-2 py-1 m-0 border-0 focus:ring-0 text-gray-700 placeholder-gray-600" name="q" placeholder="pretraži" value="">
+</div>
+</form>
+<div id="nav_items" class="hidden ml-4 items-center text-center md:block text-sm lg:text-base">
+<ul class="mx-1 flex items-center space-x-1.5 lg:space-x-5">
+<li><div class="flex flex-row items-center"><a class="py-1 flex hover:underline items-center" href="/vijesti"><span class="w-3 h-3 lg:w-3 lg:h-3 bg-vijesti inline-block rounded-sm mr-2 lg:mr-3"></span>Vijesti</a></div> </li>
+<li><div class="flex flex-row items-center"><a class="py-1 flex hover:underline items-center" href="/biznis"><span class="w-3 h-3 lg:w-3 lg:h-3 bg-biznis inline-block rounded-sm mr-2 lg:mr-3"></span>Biznis</a></div> </li>
+<li><div class="flex flex-row items-center"><a class="py-1 flex hover:underline items-center" href="/sport"><span class="w-3 h-3 lg:w-3 lg:h-3 bg-sport inline-block rounded-sm mr-2 lg:mr-3"></span>Sport</a></div> </li>
+<li><div class="flex flex-row items-center"><a class="py-1 flex hover:underline items-center" href="/magazin"><span class="w-3 h-3 lg:w-3 lg:h-3 bg-magazin inline-block rounded-sm mr-2 lg:mr-3"></span>Magazin</a></div> </li>
+<li><div class="flex flex-row items-center"><a class="py-1 flex hover:underline items-center" href="/lifestyle"><span class="w-3 h-3 lg:w-3 lg:h-3 bg-lifestyle inline-block rounded-sm mr-2 lg:mr-3"></span>Lifestyle</a></div> </li>
+<li><div class="flex flex-row items-center"><a class="py-1 flex hover:underline items-center" href="/scitech"><span class="w-3 h-3 lg:w-3 lg:h-3 bg-scitech inline-block rounded-sm mr-2 lg:mr-3"></span>Scitech</a></div> </li>
+<li><div class="flex flex-row items-center"><a class="py-1 flex hover:underline items-center" href="/auto"><span class="w-3 h-3 lg:w-3 lg:h-3 bg-auto inline-block rounded-sm mr-2 lg:mr-3"></span>Auto</a></div> </li>
+<li class="hidden md:inline"> <a class="inline-block py-1 hover:underline" href="/krizaljka"><span class="w-3 h-3 bg-gray-400 inline-block rounded-sm mr-2"></span>Križaljka</a></li>
+<li class="hidden xl:inline"> <a class="inline-block py-1 hover:underline" href="/koronavirus-u-bih"><span class="w-3 h-3 bg-red-500 inline-block rounded-sm mr-2"></span>Koronavirus</a></li>
+<li class="hidden xl:inline"> <a class="inline-block py-1 hover:underline" href="https://forum.klix.ba"><span class="w-3 h-3 bg-gray-400 inline-block rounded-sm mr-2"></span>Forum</a></li>
+</ul>
+</div>
+</div>
+<div class="w-20 ml-5 lg:ml-0 md:w-auto md:pr-6 flex flex-wrap items-center space-x-3">
+<button onclick="toggleSearch()" type="button" id="search-open" class="inline p-3 pl-0 m-0 flex items-center text-gray-600 focus:outline-none focus:text-gray-800" aria-label="Open search"><svg class="fill-current pointer-events-none  w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path></svg></button>
+<button onclick="toggleSearch()" type="button" id="search-close" class="inline p-3 pl-0 m-0 flex items-center text-gray-600 focus:outline-none focus:text-gray-800 hidden" aria-label="Close search"><svg class="fill-current w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"></path></svg></button>
+<a id="user" href="/prijava" title="Prijava korisnika" class="inline text-gray-600 hover:bg-gray-100 rounded-md">
+<div class="w-7 h-7 flex text-gray-600 items-center justify-center text-white rounded-md">
+<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+</svg>
+</div>
+</a>
+</div>
+</div>
+</header>
+<div class="pt-ssm  w-full
+    md:pt-smd
+    "></div>
+<div class="py-1 max-w-7xl mx-auto">
+<div id='ads_leaderboard' class="mx-auto mt-3 mb-3" style="display: none;">
+<script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('ads_leaderboard'); });
+        </script>
+</div>
+</div>
+<div class="container mx-auto max-w-7xl bg-gray-100 lg:px-5 xl:px-0">
+<div id="sidebar" class="p-0 hidden mb-5">
+<div class="container text-base bg-white mx-auto max-w-7xl leading-7 p-2 md:grid md:grid-cols-4">
+<ul class="mx-1">
+<li class="bg-gray-50"> <a class="block font-semibold py-1 hover:bg-gray-200 px-3" href="/"><span class="w-3 h-3 bg-gray-500 inline-block rounded-sm mr-3"></span>Naslovnica</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/najnovije"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Najnovije</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/najcitanije"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Najčitanije</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/popularne"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Popularne</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/koronavirus-u-bih"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Koronavirus u BiH</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/krizaljka"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Križaljka</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/vremenska-prognoza"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Vremenska prognoza</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/kursna-lista"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Kursna lista</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/dojavi-vijest"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Dojavi vijest</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="https://forum.klix.ba"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Forum</a></li>
+</ul>
+<ul class="mx-1">
+<li class="bg-gray-50"> <a class="block font-semibold py-1 hover:bg-gray-200 px-3" href="/vijesti"><span class="w-3 h-3 bg-vijesti inline-block rounded-sm mr-3"></span>Vijesti</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/vijesti/bih"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>BiH</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/vijesti/regija"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Regija</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/vijesti/svijet"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Svijet</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/vijesti/dijaspora"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Dijaspora</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/vijesti/crna-hronika"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Crna hronika</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/vijesti/humanitarne-akcije"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Humanitarne akcije</a></li>
+</ul>
+<ul class="mx-1">
+<li class="bg-gray-50"> <a class="block font-semibold py-1 hover:bg-gray-200 px-3" href="/biznis"><span class="w-3 h-3 bg-biznis inline-block rounded-sm mr-3"></span>Biznis</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/biznis/privreda"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Privreda</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/biznis/finansije"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Finansije</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/biznis/investicije"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Investicije</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/biznis/smart-cash"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Smart Cash</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/biznis/berza"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Berza</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/biznis/startupi"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Startupi</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/biznis/posao"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Posao</a></li>
+</ul>
+<ul class="mx-1">
+<li class="bg-gray-50"> <a class="block font-semibold py-1 hover:bg-gray-200 px-3" href="/sport"><span class="w-3 h-3 bg-sport inline-block rounded-sm mr-3"></span>Sport</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/sport/nogomet"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Nogomet</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/sport/kosarka"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Košarka</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/sport/tenis"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Tenis</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/sport/rukomet"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Rukomet</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/sport/formula1"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Formula 1</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/sport/skijanje"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Skijanje</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/sport/atletika"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Atletika</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/sport/borilacki-sportovi"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Borilački sportovi</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/sport/plivanje"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Plivanje</a></li>
+</ul>
+<ul class="mx-1">
+<li class="bg-gray-50"> <a class="block font-semibold py-1 hover:bg-gray-200 px-3" href="/magazin"><span class="w-3 h-3 bg-magazin inline-block rounded-sm mr-3"></span>Magazin</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/magazin/kultura"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Kultura</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/magazin/muzika"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Muzika</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/magazin/film-tv"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Film/TV</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/magazin/showbiz"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Showbiz</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/magazin/zanimljivosti"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Zanimljivosti</a></li>
+</ul>
+<ul class="mx-1">
+<li class="bg-gray-50"> <a class="block font-semibold py-1 hover:bg-gray-200 px-3" href="/lifestyle"><span class="w-3 h-3 bg-lifestyle inline-block rounded-sm mr-3"></span>Lifestyle</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/lifestyle/modailjepota"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Moda i ljepota</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/lifestyle/zdravlje"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Zdravlje</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/lifestyle/vezeiseks"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Veze i seks</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/lifestyle/gastro"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Gastro</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/lifestyle/kucaiured"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Kuća i ured</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/lifestyle/putovanja"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Putovanja</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/lifestyle/bebe"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Bebe</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/lifestyle/fitness"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Fitness</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/lifestyle/ljubimci"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Ljubimci</a></li>
+</ul>
+<ul class="mx-1">
+<li class="bg-gray-50"> <a class="block font-semibold py-1 hover:bg-gray-200 px-3" href="/scitech"><span class="w-3 h-3 bg-scitech inline-block rounded-sm mr-3"></span>Scitech</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/scitech/nauka"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Nauka</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/scitech/tehnologija"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Tehnologija</a></li>
+</ul>
+<ul class="mx-1">
+<li class="bg-gray-50"> <a class="block font-semibold py-1 hover:bg-gray-200 px-3" href="/auto"><span class="w-3 h-3 bg-auto inline-block rounded-sm mr-3"></span>Auto</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/auto/testovi"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Testovi</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/auto/noviteti"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Noviteti</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/auto/koncepti"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Koncepti</a></li>
+<li> <a class="block py-1 hover:bg-gray-100 px-3" href="/auto/tuning"><span class="w-3 h-3 bg-gray-200 inline-block rounded-sm mr-3"></span>Tuning</a></li>
+</ul>
+</div>
+</div>
+<article class="mb-1 md:grid md:grid-cols-11 gap-0.5 bg-white xl:px-3">
+<div class="md:col-span-11 md:px-2 lg:px-5 xl:px-0 xl:mx-2 bg-white md:border-b lg:border-gray-200">
+<div class="p-3 pb-2 lg:px-0 lg:pt-4 xl:pt-4 bg-white md:pb-4 w-full">
+<div class="flex items-center">
+<div class="flex-1 mb-1 uppercase text-xs font-title md:text-base text-magazin">Kultura</div>
+<div class="lg:hidden flex items-center space-x-1 text-gray-500 text-sm lg:text-lg">
+<svg class="ml-3 inline h-3 w-3 md:h-4 md:w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+<span>738</span>
+</div>
+</div>
+<h1 class="font-title mt-0 text-lg md:text-2xl lg:text-3xl xl:text-4xl"> Likovna kolonija u Počitelju ponovo oživjela živopisni hercegovački gradić</h1>
+<div class="md:hidden mt-3 text-gray-600 text-sm md:text-sm lg:mb-0">
+<div class="flex justify-between items-center mt-0 text-sm lg:text-lg text-gray-500 md:text-gray-500">
+<div> Klix.ba
+</div>
+<div class="text-right uppercase">
+<a class="hover:text-gray-700" href="/magazin/kultura/likovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic/160724063/komentari" rel="ugc">
+<svg class="inline h-4 w-4 md:h-5 md:w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+<span>8</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden md:block md:col-span-3 lg:col-span-2 bg-white pl-5 lg:pl-5 xl:pl-2 pr-5">
+<div class="sticky top-16 pt-5 pb-5">
+<div class="flex flex-row mb-5">
+<div class="bg-gray-300 w-10 h-10 flex items-center justify-center text-white rounded-md">
+<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+</svg>
+</div>
+<div class="ml-3 flex flex-col">
+<div class="font-semibold text-tiny mb-1 leading-tight">
+Klix.ba
+</div>
+<div class="text-sm text-gray-500">
+<span title="24.07.2016. u 15:50">
+24.07.2016.
+</span>
+</div>
+</div>
+</div>
+<div class="flex justify-items-end text-center mt-7 mb-7">
+<div class="w-1/2">
+<a class="hover:no-underline hover:text-gray-500 block" href="/magazin/kultura/likovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic/160724063/komentari" rel="ugc">
+<div class="font-title leading-7 text-2xl">8</div>
+<div class="text-gray-500 text-sm xl:text-base">komentara</div>
+</a>
+</div>
+<div class="flex-1"></div>
+<div class="w-1/2">
+<div class="font-title leading-7 text-2xl">738</div>
+<div class="text-gray-500 text-sm xl:text-base">dijeljenja</div>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-0 border mx-auto">
+<a href="https://www.facebook.com/dialog/feed?app_id=171222711838&link=https%3A%2F%2Fwww.klix.ba%2Fmagazin%2Fkultura%2Flikovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic%2F160724063?utm_source=share_button_fb" class="bg-white py-2 border-b text-gray-400 hover:text-gray-500">
+<span class="sr-only">Facebook</span>
+<svg class="h-6 w-6 mx-auto" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+</svg>
+</a>
+<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.klix.ba%2Fmagazin%2Fkultura%2Flikovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic%2F160724063?utm_source=share_button_tw" class="bg-white p-2 border-b text-gray-400 hover:text-gray-500">
+<span class="sr-only">Twitter</span>
+<svg class="h-6 w-6 mx-auto" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+</svg>
+</a>
+<a href="/cdn-cgi/l/email-protection#714e0204131b1412054c3d181a1e071f105443411a1e1d1e1f181b1054434104544341211e5432455449351805141d1b04544341011e1f1e071e5443411e54324454333418071b141d1054434154324454333418071e0118021f185443411914031214161e07105432455449351a18544341160310151854324554494657131e15084c19050501025442305443375443370606065f1a1d18095f13105443371c1016100b181f5443371a041d050403105443371d181a1e071f105c1a1e1d1e1f181b105c045c011e121805141d1b045c011e1f1e071e5c1e0b18071b141d105c0b18071e0118021f185c1914031214161e0710121a185c1603101518125443374047414643454147424e04051c2e021e040312144c02191003142e130405051e1f2e1d181f1a5704051c2e1c141518041c4c141c10181d" class="bg-white p-2 border-b text-gray-400 hover:text-gray-500" role="button" aria-label="Share via Email">
+<span class="sr-only">Email</span>
+<svg class="h-6 w-6 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+</a>
+<a href="viber://forward?text=https%3A%2F%2Fwww.klix.ba%2Fmagazin%2Fkultura%2Flikovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic%2F160724063?utm_source=share_button_viber" class="bg-white p-2 border-b text-gray-400 hover:text-gray-500" role="button" aria-label="Share via Email">
+<span class="sr-only">Email</span>
+<svg class="h-6 w-6 mx-auto" fill="currentColor" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+<path d="M12.892 13.745s.427.038.656-.247l.448-.563c.216-.28.738-.458 1.249-.174.676.382 1.55.982 2.149 1.541.33.278.407.688.182 1.121l-.002.009c-.232.408-.541.791-.932 1.148l-.009.006c-.44.367-.946.58-1.487.404l-.01-.014c-.972-.275-3.304-1.464-4.79-2.649-2.431-1.918-4.159-5.082-4.637-6.778l-.015-.01c-.176-.543.039-1.049.404-1.488l.007-.008c.357-.391.739-.701 1.148-.932l.009-.002c.432-.225.842-.149 1.121.182.367.379 1.056 1.291 1.54 2.149.284.51.106 1.033-.173 1.248l-.564.448c-.284.23-.247.657-.247.657s.834 3.156 3.953 3.952zm4.907-2.616c-.167 0-.303-.135-.304-.302-.014-1.83-.564-3.288-1.634-4.332-1.072-1.045-2.427-1.581-4.027-1.592-.168-.001-.303-.138-.301-.306.001-.167.136-.301.303-.301h.002c1.762.012 3.258.606 4.447 1.764 1.19 1.162 1.802 2.765 1.817 4.763.001.167-.133.304-.301.306h-.002zm-1.595-.624h-.007c-.168-.004-.301-.143-.297-.31.024-1.038-.273-1.878-.906-2.569-.63-.689-1.495-1.065-2.645-1.149-.167-.013-.293-.158-.281-.325.013-.167.158-.293.325-.281 1.294.095 2.32.548 3.049 1.345.733.8 1.092 1.807 1.065 2.992-.004.165-.139.297-.303.297zm-1.558-.522c-.161 0-.295-.126-.303-.289-.051-1.03-.537-1.534-1.527-1.588-.168-.009-.296-.152-.287-.319.009-.168.151-.296.319-.287 1.308.07 2.034.819 2.101 2.164.009.167-.12.31-.288.318l-.015.001zm6.817 3.469c-.605 4.877-4.172 5.185-4.83 5.396-.28.09-2.882.737-6.152.524 0 0-2.438 2.94-3.199 3.705-.119.119-.258.167-.352.145-.131-.032-.167-.188-.165-.414l.02-4.016v-.001c-4.762-1.323-4.485-6.295-4.431-8.898.054-2.603.543-4.736 1.996-6.17 2.61-2.364 7.987-2.011 7.987-2.011 4.541.02 6.717 1.387 7.222 1.845 1.675 1.434 2.528 4.867 1.904 9.895zm-.652-11.113c-.597-.548-3.007-2.298-8.375-2.322 0 0-6.33-.382-9.416 2.45-1.718 1.718-2.322 4.231-2.386 7.348-.063 3.118-.146 8.958 5.484 10.542l.006.002-.004 2.416s-.035.979.609 1.179c.779.241 1.236-.502 1.981-1.304.408-.44.971-1.086 1.397-1.58 3.851.322 6.812-.417 7.149-.526.777-.253 5.177-.816 5.893-6.657.738-6.022-.358-9.83-2.338-11.548z" /></svg>
+</a>
+</div>
+<div id='ads_skyscraper' class="mx-auto mb-5 mt-5" style="display: none;">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('ads_skyscraper'); });
+        </script>
+</div>
+</div>
+</div>
+<div class="md:col-span-8 lg:col-span-6 md:mt-5 xl:col-span-6 bg-white lg:border-l lg:border-r border-gray-200 md:pr-5 lg:pr-0">
+<nav id="breadcrumb" class="hidden py-2 px-3 w-full bg-white mb-0.5 text-xs md:text-tiny text-gray-500">
+<ol class="flex flex-row items-center space-x-3">
+<li><a href="https://www.klix.ba" class="text-gray-400 hover:text-gray-600">
+<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+</svg>
+</a>
+</li>
+<span class="text-gray-400 text-xs">&#x203A;</span>
+<li><a href="https://www.klix.ba/magazin" class="hover:underline">Magazin</a></li>
+<span class="text-gray-400 text-xs">&#x203A;</span> <li><a href="https://www.klix.ba/magazin/kultura" class="hover:underline">Kultura</a></li>
+</ol>
+</nav>
+<div class="lg:px-5">
+<div class="bg-white lg:pb-3">
+<div style="background-color:#414630" class="relative pb-2/3 md:pb-2/3 bg-opacity-50">
+<picture class="absolute w-full h-full z-10">
+<source srcset="https://static.klix.ba/media/images/vijesti/b_160724063.jpg?v=1" media="(min-width: 640px)" />
+<img class="absolute w-full h-full object-cover" src="https://static.klix.ba/media/images/vijesti/b_160724063.jpg?v=1" alt="" />
+</picture>
+<a class="absolute w-full h-full z-30" href="javascript:void(0)" onclick="openPhotoSwipe(1)"></a>
+</div>
+<div class="pt-1 lg:pt-1 flex flex-row space-x-1">
+<a class="w-1/4 relative" href="javascript:void(0)" onclick="openPhotoSwipe(1+1)">
+<img src="https://static.klix.ba/media/images/vijesti/160724063.1_th.jpg?v=1" alt="">
+ </a>
+<a class="w-1/4 relative" href="javascript:void(0)" onclick="openPhotoSwipe(2+1)">
+<img src="https://static.klix.ba/media/images/vijesti/160724063.5_th.jpg?v=1" alt="">
+</a>
+<a class="w-1/4 relative" href="javascript:void(0)" onclick="openPhotoSwipe(3+1)">
+<img src="https://static.klix.ba/media/images/vijesti/160724063.7_th.jpg?v=1" alt="">
+</a>
+<a class="w-1/4 relative" href="javascript:void(0)" onclick="openPhotoSwipe(4+1)">
+<div class="absolute z-40 bg-black bg-opacity-60 w-full h-full text-white text-base lg:text-2xl flex items-center align-middle">
+<div class="mx-auto inline font-title">+3</div>
+</div>
+<img src="https://static.klix.ba/media/images/vijesti/160724063.8_th.jpg?v=1" alt="">
+</a>
+</div>
+<div class="text-gray-500 font-tekst text-sm lg:text-sm px-3 md:px-0 py-1"> </div>
+<div class="px-3 py-0 md:px-0 lg:pb-2">
+<div class="my-3 flex justify-end space-x-4 items-center md:hidden">
+<div class="flex-1 text-tiny md:text-tiny text-gray-500">
+<span title="24.07.2016. u 15:50">
+24.07.2016.
+</span>
+</div>
+<span class="hidden md:inline text-gray-500">Podijeli</span>
+<a href="https://www.facebook.com/dialog/feed?app_id=171222711838&amp;link=https%3A%2F%2Fwww.klix.ba%2Fmagazin%2Fkultura%2Flikovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic%2F160724063?utm_source=share_button_fb&amp;redirect_uri=https%3A%2F%2Fwww.klix.ba" class="text-gray-400 hover:text-gray-500">
+<span class="sr-only">Facebook</span>
+<svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+</svg>
+</a>
+<a href="fb-messenger://share/?app_id=171222711838&amp;link=https%3A%2F%2Fwww.klix.ba%2Fmagazin%2Fkultura%2Flikovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic%2F160724063?utm_source=share_button_fbmessenger" class="text-gray-400 hover:text-gray-500">
+<span class="sr-only">Messenger</span>
+<svg class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c-6.627 0-12 4.975-12 11.111 0 3.497 1.745 6.616 4.472 8.652v4.237l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111 0-6.136-5.373-11.111-12-11.111zm1.193 14.963l-3.056-3.259-5.963 3.259 6.559-6.963 3.13 3.259 5.889-3.259-6.559 6.963z" /></svg>
+</a>
+<a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.klix.ba%2Fmagazin%2Fkultura%2Flikovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic%2F160724063?utm_source=share_button_tw" class="text-gray-400 hover:text-gray-500">
+<span class="sr-only">Twitter</span>
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+</svg>
+</a>
+<a href="/cdn-cgi/l/email-protection#8db2fef8efe7e8eef9b0c1e4e6e2fbe3eca8bfbde6e2e1e2e3e4e7eca8bfbdf8a8bfbddde2a8ceb9a8b5c9e4f9e8e1e7f8a8bfbdfde2e3e2fbe2a8bfbde2a8ceb8a8cfc8e4fbe7e8e1eca8bfbda8ceb8a8cfc8e4fbe2fde4fee3e4a8bfbde5e8ffeee8eae2fbeca8ceb9a8b5c9e6e4a8bfbdeaffece9e4a8ceb9a8b5baabefe2e9f4b0e5f9f9fdfea8becca8bfcba8bfcbfafafaa3e6e1e4f5a3efeca8bfcbe0eceaecf7e4e3a8bfcbe6f8e1f9f8ffeca8bfcbe1e4e6e2fbe3eca0e6e2e1e2e3e4e7eca0f8a0fde2eee4f9e8e1e7f8a0fde2e3e2fbe2a0e2f7e4fbe7e8e1eca0f7e4fbe2fde4fee3e4a0e5e8ffeee8eae2fbeceee6e4a0eaffece9e4eea8bfcbbcbbbdbabfb9bdbbbeb2f8f9e0d2fee2f8ffeee8b0fee5ecffe8d2eff8f9f9e2e3d2e1e4e3e6abf8f9e0d2e0e8e9e4f8e0b0e8e0ece4e1" class="text-gray-400 hover:text-gray-500" role="button" aria-label="Share via Email">
+<span class="sr-only">Email</span>
+<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+</svg>
+</a>
+<a href="viber://forward?text=https%3A%2F%2Fwww.klix.ba%2Fmagazin%2Fkultura%2Flikovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic%2F160724063?utm_source=share_button_viber" class="text-gray-400 hover:text-gray-500" role="button" aria-label="Share via Email">
+<span class="sr-only">Email</span>
+<svg fill="currentColor" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+<path d="M12.892 13.745s.427.038.656-.247l.448-.563c.216-.28.738-.458 1.249-.174.676.382 1.55.982 2.149 1.541.33.278.407.688.182 1.121l-.002.009c-.232.408-.541.791-.932 1.148l-.009.006c-.44.367-.946.58-1.487.404l-.01-.014c-.972-.275-3.304-1.464-4.79-2.649-2.431-1.918-4.159-5.082-4.637-6.778l-.015-.01c-.176-.543.039-1.049.404-1.488l.007-.008c.357-.391.739-.701 1.148-.932l.009-.002c.432-.225.842-.149 1.121.182.367.379 1.056 1.291 1.54 2.149.284.51.106 1.033-.173 1.248l-.564.448c-.284.23-.247.657-.247.657s.834 3.156 3.953 3.952zm4.907-2.616c-.167 0-.303-.135-.304-.302-.014-1.83-.564-3.288-1.634-4.332-1.072-1.045-2.427-1.581-4.027-1.592-.168-.001-.303-.138-.301-.306.001-.167.136-.301.303-.301h.002c1.762.012 3.258.606 4.447 1.764 1.19 1.162 1.802 2.765 1.817 4.763.001.167-.133.304-.301.306h-.002zm-1.595-.624h-.007c-.168-.004-.301-.143-.297-.31.024-1.038-.273-1.878-.906-2.569-.63-.689-1.495-1.065-2.645-1.149-.167-.013-.293-.158-.281-.325.013-.167.158-.293.325-.281 1.294.095 2.32.548 3.049 1.345.733.8 1.092 1.807 1.065 2.992-.004.165-.139.297-.303.297zm-1.558-.522c-.161 0-.295-.126-.303-.289-.051-1.03-.537-1.534-1.527-1.588-.168-.009-.296-.152-.287-.319.009-.168.151-.296.319-.287 1.308.07 2.034.819 2.101 2.164.009.167-.12.31-.288.318l-.015.001zm6.817 3.469c-.605 4.877-4.172 5.185-4.83 5.396-.28.09-2.882.737-6.152.524 0 0-2.438 2.94-3.199 3.705-.119.119-.258.167-.352.145-.131-.032-.167-.188-.165-.414l.02-4.016v-.001c-4.762-1.323-4.485-6.295-4.431-8.898.054-2.603.543-4.736 1.996-6.17 2.61-2.364 7.987-2.011 7.987-2.011 4.541.02 6.717 1.387 7.222 1.845 1.675 1.434 2.528 4.867 1.904 9.895zm-.652-11.113c-.597-.548-3.007-2.298-8.375-2.322 0 0-6.33-.382-9.416 2.45-1.718 1.718-2.322 4.231-2.386 7.348-.063 3.118-.146 8.958 5.484 10.542l.006.002-.004 2.416s-.035.979.609 1.179c.779.241 1.236-.502 1.981-1.304.408-.44.971-1.086 1.397-1.58 3.851.322 6.812-.417 7.149-.526.777-.253 5.177-.816 5.893-6.657.738-6.022-.358-9.83-2.338-11.548z" /></svg>
+</a>
+</div>
+<div>
+<div id="excerpt" class="mt-5 md:mt-2 xl:mt-3 mb-5 font-sans font-semibold text-lg lg:text-xl leading-6 md:leading-7">
+<p class="lead">U Internacionalnoj umjetničkoj koloniji Počitelj u toku je 52. saziv likovne kolonije, a trajat će do 27. jula.</p>
+</div>
+<div class="bg-gray-100">
+<div id='ads_intext' class="mx-auto my-2 text-center" style="display: none;">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('ads_intext'); });
+            </script>
+</div>
+</div>
+<div id="text" class="break-words mt-3 prose prose-md prose-indigo text-lg lg:text-xl space-y-4 mb-3 leading-6 md:leading-7">
+<p>Kao i svake godine, u Koloniji Počitelj se ovog ljeta okupilo oko dvadeset umjetnika iz BiH, regije i drugih zemalja Evrope, pod izgovorom odličnih uslova za kreativni rad, ostvarivanja novih prijateljstava i upoznavanje sa znamenitostima regije. Mada je period od sedam dana jedva dovoljan za jedan ovakav saziv, bogatstvo radova koji pritom nastanu govori u prilog visokom kvalitetu i značaju ove tradicionalne manifestacije u organizaciji ULUBiH-a.</p>
+<p>Dvadesetog jula, dolaskom umjetnika iz regije i Evrope, podjelom akreditacija i obraćanjem predsjednika ULUBiH Admira Mujkića, svečano je počeo Saziv likovne kolonije, a već u proteklih nekoliko dana nastalo je više umjetničkih slika koje će obogatiti fundus slika IUK Počitelj.</p>
+<p>U subotu, 23. jula, IUK Počitelj posjetio je predsjedavajući Vijeća ministara Denis Zvizdić sa delegacijom Crne Gore, na čelu sa predsjednikom Vlade Crne Gore Milom Đukanovićem, njegovim savjetnikom Milanom Roćenom, te ambasadorom Crne Gore u BiH Milanom Lakićem. Predstavnici ULUBiH-a obratili su se prisutnima i poklonili im monografiju Kolonije Počitelj, a Aleš Sedmak, predsjednik slovenačkog Društva likovnih umjetnika, iznio je plan nastao kao rezultat potpisivanja sporazuma o saradnji udruženja likovnih umjetnika zemalja regije. Gostujuća delegacija obišla je prostorije Kolonije, pogledala postavku radova nastalih na ranijim sazivima i izložbu Muhameda Ćeifa i Samira Sućeske postavljenu u maloj galeriji kolonije, te su izrazili spremnost za davanje podrške daljnjem radu Kolonije Počitelj.</p>
+<p>U inspirativnom ambijentu stare jezgre grada Počitelja i ugodnoj atmosferi počiteljske kolonije, uz muziku i pjesmu, umjetnici će provesti ukupno sedam dana, tokom kojih će stvarati umjetnička djela, a u narednim danima će imati priliku obići obližnja kulturna i prirodna blaga naše zemlje, kao što su grad Mostar, nekropola stećaka Radimlja, vodopad Kravice i Makova hiža u Stocu.</p>
+<p>Kolonija Počitelj je u navedenom periodu otvorena za sve koji žele doći i posmatrati umjetnike u radu, a stalni građani Počitelja se uvijek posebno raduju sazivu internacionalne kolonije, jer je to ujedno i period kada ovaj stari gradić najviše oživi. Sa štafelajima raspoređenim po starim kaldrmama, sa mnoštvom boja i kistovima u zamahu, mnogobrojni turisti i putnici-namjernici posebno uživaju u obilasku ovog osmanskodobnog grada, dok posmatraju kako je ovaj ambijent skladnog spoja arhitekture, hercegovačkog krša i prirodnog zelenila nadahnuo umjetnike na stvaranje.</p>
+<p>Po završetku kolonije, 27. jula, bit će održana prigodna manifestacija na kojoj će učesnicima biti dodijeljeni certifikati. Bit će priređen i prigodan muzički i kulturni program, a manifestaciji će moći prisustvovati svi zainteresovani posjetioci. Izložba radova sa ovogodišnje kolonije bit će tradicionalno prikazana u Sarajevu, u galeriji &quot;Roman Petrović&quot; naredne godine, povodom 1. marta – Dana nezavisnosti Bosne i Hercegovine.</p>
+<p>Ove godine na Koloniji učestvuju umjetnici: Aleš Sedmak, Paola Korošec, Barbara Kaštelec (Slovenija), Davor Metak, Danko Friščić, Igor Zlobec (Hrvatska), Dušan Rusalić, Miroslav Lazović (Srbija), Goran Ćetković, Srđan Todorović, Igor Rakčević (Crna Gora), Burim Ajdini, Iliana Petruševska, Sonja Dimovska (Makedonija), Fuad Topčagić, Emir Osmić, Rebeka Abdagić, Džejlana Karaman, Emir Pašić (BiH), Kateryna Bortsova (Ukrajina) i Hande Alkalin (Turska).</p>
+</div>
+<div class="scrollbar-none my-2 py-1 overflow-x-auto scrolling-touch whitespace-no-wrap">
+<a class="inline-block bg-gray-100 text-gray-700 mr-2 mb-2 px-3 py-1 rounded-lg text-sm hover:bg-gray-300" href="/tagovi/umjetnost/442">umjetnost</a>
+<a class="inline-block bg-gray-100 text-gray-700 mr-2 mb-2 px-3 py-1 rounded-lg text-sm hover:bg-gray-300" href="/tagovi/pocitelj/3893">Počitelj</a>
+<a class="inline-block bg-gray-100 text-gray-700 mr-2 mb-2 px-3 py-1 rounded-lg text-sm hover:bg-gray-300" href="/tagovi/likovna-kolonija/8221">likovna kolonija</a>
+<a class="inline-block bg-gray-100 text-gray-700 mr-2 mb-2 px-3 py-1 rounded-lg text-sm hover:bg-gray-300" href="/tagovi/ulubih/20955">ULUBiH</a>
+<a class="inline-block bg-gray-100 text-gray-700 mr-2 mb-2 px-3 py-1 rounded-lg text-sm hover:bg-gray-300" href="/tagovi/admir-mujkic/22182">Admir Mujkić</a>
+</div>
+<div class="p-0">
+<div id='ads_belowtext' class="mx-auto" style="display: none;">
+<script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('ads_belowtext'); });
+            </script>
+</div>
+</div>
+<div class="p-3 bg-gray-100 mt-3 -ml-3 -mr-3 lg:-ml-5 lg:-mr-5">
+<div class="font-title text-tiny mb-2 text-gray-600">Komentari</div>
+<a href="/magazin/kultura/likovna-kolonija-u-pocitelju-ponovo-ozivjela-zivopisni-hercegovacki-gradic/160724063/komentari" rel="ugc" class="mt-3 block bg-gray-400 text-white uppercase rounded-md  text-center py-2 text-sm font-semibold hover:bg-gray-500">
+Prikaži sve komentare (8)
+</a>
+</div>
+<div class="py-3">
+<div class="pb-2 px-0 flex flex-row justify-between space-x-7 border-b text-gray-600">
+<div class="font-title text-tiny">Vezani članci</div>
+<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+</svg>
+</div>
+<div class="overflow-auto">
+<div class="flex flex-nowrap w-658 space-x-3">
+<article class="mt-3 w-1/2">
+<div class="mb-2">
+<div class="relative pb-2/4 bg-gray-200">
+<a href="/magazin/zanimljivosti/umjetnica-planira-prodati-svoju-jajnu-celiju-u-obliku-nft-a-na-art-baselu/211206023" title="Umjetnica planira prodati svoju jajnu ćeliju u obliku NFT-a na Art Baselu">
+<picture class="absolute w-full h-full ">
+<source data-srcset="https://static.klix.ba/media/images/vijesti/m21_211206023.jpg?v=1" media="(min-width: 768px)" />
+<img class="lazyload absolute w-full h-full text-xs" data-srcset="https://static.klix.ba/media/images/vijesti/m21_211206023.jpg?v=1" alt="Umjetnica planira prodati svoju jajnu ćeliju u obliku NFT-a na Art Baselu" />
+</picture>
+</a>
+</div>
+</div>
+<div class="px-0  pt-0 flex-1 flex flex-col flex-grow">
+<div class="font-title uppercase truncate inline text-xs mb-1 md:mb-1 text-magazin ">
+Neobično umjetničko djelo
+</div>
+<a class="hover:text-gray-600" href="/magazin/zanimljivosti/umjetnica-planira-prodati-svoju-jajnu-celiju-u-obliku-nft-a-na-art-baselu/211206023">
+<h2 class="text-sm font-title leading-tight md:leading-tight ">Umjetnica planira prodati svoju jajnu ćeliju u obliku NFT-a na Art Baselu</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2 hidden">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">1 mjesec</div>
+</div>
+<div class="text-right text-sm uppercase ">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+11
+<svg class="ml-1 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+0
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="mt-3 w-1/2">
+<div class="mb-2">
+<div class="relative pb-2/4 bg-gray-200">
+<a href="/magazin/zanimljivosti/portugalski-umjetnik-pretvara-betonske-blokove-u-nevjerovatne-3d-grafite/211122126" title="Portugalski umjetnik pretvara betonske blokove u nevjerovatne 3D grafite">
+<picture class="absolute w-full h-full ">
+<source data-srcset="https://static.klix.ba/media/images/vijesti/m21_211122126.jpg?v=1" media="(min-width: 768px)" />
+<img class="lazyload absolute w-full h-full text-xs" data-srcset="https://static.klix.ba/media/images/vijesti/m21_211122126.jpg?v=1" alt="Portugalski umjetnik pretvara betonske blokove u nevjerovatne 3D grafite" />
+</picture>
+</a>
+</div>
+</div>
+<div class="px-0  pt-0 flex-1 flex flex-col flex-grow">
+<div class="font-title uppercase truncate inline text-xs mb-1 md:mb-1 text-magazin ">
+Impresivne kreacije
+</div>
+<a class="hover:text-gray-600" href="/magazin/zanimljivosti/portugalski-umjetnik-pretvara-betonske-blokove-u-nevjerovatne-3d-grafite/211122126">
+<h2 class="text-sm font-title leading-tight md:leading-tight ">Portugalski umjetnik pretvara betonske blokove u nevjerovatne 3D grafite</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2 hidden">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">2 mjeseca</div>
+</div>
+<div class="text-right text-sm uppercase ">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+22
+<svg class="ml-1 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+91
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="mt-3 w-1/2">
+<div class="mb-2">
+<div class="relative pb-2/4 bg-gray-200">
+<a href="/magazin/kultura/slika-umjetnice-fride-kahlo-prodana-za-rekordnih-34-9-miliona-dolara/211117017" title="Slika umjetnice Fride Kahlo prodana za rekordnih 34,9 miliona dolara">
+<picture class="absolute w-full h-full ">
+<source data-srcset="https://static.klix.ba/media/images/vijesti/m21_211117017.jpg?v=1" media="(min-width: 768px)" />
+<img class="lazyload absolute w-full h-full text-xs" data-srcset="https://static.klix.ba/media/images/vijesti/m21_211117017.jpg?v=1" alt="Slika umjetnice Fride Kahlo prodana za rekordnih 34,9 miliona dolara" />
+</picture>
+</a>
+</div>
+</div>
+<div class="px-0  pt-0 flex-1 flex flex-col flex-grow">
+<div class="font-title uppercase truncate inline text-xs mb-1 md:mb-1 text-magazin ">
+Aukcija u New Yorku
+</div>
+<a class="hover:text-gray-600" href="/magazin/kultura/slika-umjetnice-fride-kahlo-prodana-za-rekordnih-34-9-miliona-dolara/211117017">
+<h2 class="text-sm font-title leading-tight md:leading-tight ">Slika umjetnice Fride Kahlo prodana za rekordnih 34,9 miliona dolara</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2 hidden">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">2 mjeseca</div>
+</div>
+<div class="text-right text-sm uppercase ">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+9
+<svg class="ml-1 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+175
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<div class="lg:hidden bg-gray-100 p-1 -ml-3 -mr-3 lg:-ml-5 lg:-mr-5"></div>
+<div class="pt-3">
+<div class="pb-2 px-0 flex flex-row justify-between space-x-7 border-b text-gray-600">
+<div class="font-title text-tiny">Promo</div>
+<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+</svg>
+</div>
+<div class="bg-white divide-y space-y-2 divide-y divide-gray-200 mb-3">
+<article class="pt-2 flex">
+<div class="w-20 mr-2 flex-none">
+<div class="relative pb-1/1 md:pb-1/1 bg-gray-200">
+<a href="/biznis/telemach-bh-najpozeljniji-poslodavac-u-telekomunikacijama-u-bih/220127105" title="Telemach BH najpoželjniji poslodavac u telekomunikacijama u BiH">
+<picture class="absolute w-full h-full ">
+<source data-srcset="https://static.klix.ba/media/images/vijesti/m11_220127105.jpg?v=1" media="(min-width: 768px)" />
+<img class="lazyload absolute w-full h-full text-xs" data-srcset="https://static.klix.ba/media/images/vijesti/s11_220127105.jpg?v=1" alt="Telemach BH najpoželjniji poslodavac u telekomunikacijama u BiH" />
+</picture>
+</a>
+</div>
+</div>
+<div class="px-0  pt-0 flex-1 flex flex-col flex-grow">
+<div class="font-title uppercase inline text-xs mb-1 md:mb-1 text-biznis ">
+promo
+<img data-src="/pixel/220127105" class="lazyload" alt="" />
+</div>
+<a class="hover:text-gray-600" href="/biznis/telemach-bh-najpozeljniji-poslodavac-u-telekomunikacijama-u-bih/220127105">
+<h2 class="text-sm font-title leading-tight md:leading-tight ">Telemach BH najpoželjniji poslodavac u telekomunikacijama u BiH</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">2 dana</div>
+</div>
+<div class="text-right text-sm uppercase ">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+0
+<svg class="ml-1 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+36
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="pt-2 flex">
+<div class="w-20 mr-2 flex-none">
+<div class="relative pb-1/1 md:pb-1/1 bg-gray-200">
+<a href="/biznis/procredit-banka-predstavlja-mrezu-punjaca-za-elektricne-automobile/220128054" title="ProCredit Banka predstavlja mrežu punjača za električne automobile">
+<picture class="absolute w-full h-full ">
+<source data-srcset="https://static.klix.ba/media/images/vijesti/m11_220128054.jpg?v=1" media="(min-width: 768px)" />
+<img class="lazyload absolute w-full h-full text-xs" data-srcset="https://static.klix.ba/media/images/vijesti/s11_220128054.jpg?v=1" alt="ProCredit Banka predstavlja mrežu punjača za električne automobile" />
+</picture>
+</a>
+</div>
+</div>
+<div class="px-0  pt-0 flex-1 flex flex-col flex-grow">
+<div class="font-title uppercase inline text-xs mb-1 md:mb-1 text-biznis ">
+e-mobilnost
+<img data-src="/pixel/220128054" class="lazyload" alt="" />
+</div>
+<a class="hover:text-gray-600" href="/biznis/procredit-banka-predstavlja-mrezu-punjaca-za-elektricne-automobile/220128054">
+<h2 class="text-sm font-title leading-tight md:leading-tight ">ProCredit Banka predstavlja mrežu punjača za električne automobile</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">2 dana</div>
+</div>
+<div class="text-right text-sm uppercase ">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+0
+<svg class="ml-1 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+56
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="pt-2 flex">
+<div class="w-20 mr-2 flex-none">
+<div class="relative pb-1/1 md:pb-1/1 bg-gray-200">
+<a href="/lifestyle/sezonska-rasprodaja-bicikala-u-trek-bike-centru/220128014" title="Sezonska rasprodaja bicikala u Trek bike centru">
+<picture class="absolute w-full h-full ">
+<source data-srcset="https://static.klix.ba/media/images/vijesti/m11_220128014.jpg?v=1" media="(min-width: 768px)" />
+<img class="lazyload absolute w-full h-full text-xs" data-srcset="https://static.klix.ba/media/images/vijesti/s11_220128014.jpg?v=1" alt="Sezonska rasprodaja bicikala u Trek bike centru" />
+</picture>
+</a>
+</div>
+</div>
+<div class="px-0  pt-0 flex-1 flex flex-col flex-grow">
+<div class="font-title uppercase inline text-xs mb-1 md:mb-1 text-lifestyle ">
+promo
+<img data-src="/pixel/220128014" class="lazyload" alt="" />
+</div>
+<a class="hover:text-gray-600" href="/lifestyle/sezonska-rasprodaja-bicikala-u-trek-bike-centru/220128014">
+<h2 class="text-sm font-title leading-tight md:leading-tight ">Sezonska rasprodaja bicikala u Trek bike centru</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">2 dana</div>
+</div>
+<div class="text-right text-sm uppercase ">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+0
+<svg class="ml-1 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+1
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-8 md:col-start-4 lg:col-span-3 xl:col-span-3 bg-gray-100 md:bg-white md:h-auto mt-2 md:mt-0 md:pt-0 md:px-0 lg:px-0 lg:pt-0">
+<div class="md:flex md:flex-wrap md:flex-col md:w-full md:h-full px-0 lg:px-0 ">
+<div class="sticky top-16 pb-5 pt-1 md:pt-0 lg:pt-5">
+<div id='ads_rectangle' class="mx-auto my-0 md:my-2 xl:mb-5" style="display: none;">
+<script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('ads_rectangle'); });
+            </script>
+</div>
+<div class="mt-0 pb-2 px-3 md:px-5 md:pl-0 lg:pl-5 lg:mt-0 bg-white">
+<div class="bg-gray-100 -mx-3 py-1 mb-3 md:hidden"></div>
+<div class="pb-2 px-0 flex flex-row justify-between space-x-7 border-b text-gray-600">
+<div class="font-title text-tiny">Popularno</div>
+<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+</svg>
+</div>
+<div class="divide-y space-y-2 divide-gray-200">
+<article class="pt-2">
+<div class="font-title uppercase text-xs mb-1 text-sport">Zimski prijelazni rok</div>
+<a href="/sport/nogomet/transferi-i-spekulacije-liverpool-zvanicno-doveo-pojacanje-iz-porta-dembele-blizu-psg-a/220130013" class="hover:text-gray-600">
+<h2 class="text-tiny lg:text-base leading-tight">Transferi i špekulacije: Liverpool zvanično doveo pojačanje iz Porta, Dembele blizu PSG-a</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">44 min</div>
+</div>
+<div class="text-right text-sm uppercase flex flex-row items-center space-x-1">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+<span>13</span>
+<svg class="ml-3 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+<span>32</span>
+</div>
+</div>
+</div>
+</article>
+<article class="pt-2">
+<div class="font-title uppercase text-xs mb-1 text-vijesti">Taškent</div>
+<a href="/vijesti/svijet/majka-u-uzbekistanu-bacila-bebu-u-kavez-mrkog-medvjeda-on-je-onjusio-i-odsetao/220130084" class="hover:text-gray-600">
+<h2 class="text-tiny lg:text-base leading-tight">Majka u Uzbekistanu bacila bebu u kavez mrkog medvjeda, on je onjušio i odšetao</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">55 min</div>
+</div>
+<div class="text-right text-sm uppercase flex flex-row items-center space-x-1">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+<span>63</span>
+<svg class="ml-3 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+<span>0</span>
+</div>
+</div>
+</div>
+</article>
+ <article class="pt-2">
+<div class="font-title uppercase text-xs mb-1 text-vijesti">Govorio za HRT</div>
+<a href="/vijesti/bih/covic-treba-biti-realan-vrijeme-je-isteklo-a-uslova-za-izbore-nema/220130079" class="hover:text-gray-600">
+<h2 class="text-tiny lg:text-base leading-tight">Čović: Treba biti realan - vrijeme je isteklo, a uslova za izbore nema</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">2 sata</div>
+</div>
+<div class="text-right text-sm uppercase flex flex-row items-center space-x-1">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+<span>331</span>
+<svg class="ml-3 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+<span>576</span>
+</div>
+</div>
+</div>
+</article>
+<article class="pt-2">
+<div class="font-title uppercase text-xs mb-1 text-vijesti">Raport iz Neuma</div>
+<a href="/vijesti/dodik-prekinuo-press-konferenciju-i-javio-se-na-covicev-poziv/220130057" class="hover:text-gray-600">
+<h2 class="text-tiny lg:text-base leading-tight">Dodik prekinuo press konferenciju i javio se na Čovićev poziv</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">6 sati</div>
+</div>
+<div class="text-right text-sm uppercase flex flex-row items-center space-x-1">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+<span>364</span>
+<svg class="ml-3 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+<span>41</span>
+</div>
+</div>
+</div>
+</article>
+<article class="pt-2">
+<div class="font-title uppercase text-xs mb-1 text-sport">Zviždali mu u Australiji</div>
+<a href="/sport/tenis/medvedev-otvorio-dusu-nakon-finala-uvijek-ce-navijati-protiv-nas-rusa/220130083" class="hover:text-gray-600">
+<h2 class="text-tiny lg:text-base leading-tight">Medvedev otvorio dušu nakon finala: Uvijek će navijati protiv nas Rusa</h2>
+</a>
+<div class="flex-grow-0 mt-auto align-text-bottom pt-1 md:pt-2">
+<div class="flex justify-between items-center mt-0 text-sm text-gray-400 md:text-gray-400">
+<div class="flex text-center space-x-2 divide-x divide-gray-200 items-center text-center">
+<div class="text-center">1 sat</div>
+</div>
+<div class="text-right text-sm uppercase flex flex-row items-center space-x-1">
+<svg class="inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
+<path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z" />
+</svg>
+<span>60</span>
+<svg class="ml-3 inline h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" />
+</svg>
+<span>38</span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="pswp" style="z-index: 2500" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+
+<div class="pswp__container">
+<div class="pswp__item"></div>
+<div class="pswp__item"></div>
+<div class="pswp__item"></div>
+</div>
+
+<div class="pswp__ui pswp__ui--hidden">
+<div class="pswp__top-bar">
+
+<div class="pswp__counter"></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title="Share"></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+
+<div class="pswp__preloader">
+<div class="pswp__preloader__icn">
+<div class="pswp__preloader__cut">
+<div class="pswp__preloader__donut"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class="pswp__share-tooltip"></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class="pswp__caption">
+<div class="pswp__caption__center"></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+                var openPhotoSwipe = function(index) {
+                    var pswpElement = document.querySelectorAll('.pswp')[0];
+
+                    // build items array
+                    var items = [
+                                                    {   src: "https://static.klix.ba/media/images/vijesti/160724063.6_mn.jpg?v=1",
+                            w: 1200,
+                            h: 896,
+                            title: " "
+                        },
+                                                    {   src: "https://static.klix.ba/media/images/vijesti/160724063.1_mn.jpg?v=1",
+                            w: 1200,
+                            h: 1593,
+                            title: " "
+                        },
+                                                    {   src: "https://static.klix.ba/media/images/vijesti/160724063.5_mn.jpg?v=1",
+                            w: 1200,
+                            h: 896,
+                            title: " "
+                        },
+                                                    {   src: "https://static.klix.ba/media/images/vijesti/160724063.7_mn.jpg?v=1",
+                            w: 1200,
+                            h: 896,
+                            title: " "
+                        },
+                                                    {   src: "https://static.klix.ba/media/images/vijesti/160724063.8_xl.jpg?v=1",
+                            w: 1200,
+                            h: 945,
+                            title: " "
+                        },
+                                                    {   src: "https://static.klix.ba/media/images/vijesti/160724063.4_mn.jpg?v=1",
+                            w: 1200,
+                            h: 896,
+                            title: " "
+                        },
+                                                    {   src: "https://static.klix.ba/media/images/vijesti/160724063.3_mn.jpg?v=1",
+                            w: 1200,
+                            h: 1104,
+                            title: " "
+                        },
+                                                    {   src: "https://static.klix.ba/media/images/vijesti/160724063.2_mn.jpg?v=1",
+                            w: 1200,
+                            h: 896,
+                            title: " "
+                        },
+                                                ];
+
+                    // define options (if needed)
+                    var options = {
+                        // history & focus options are disabled on CodePen
+                        history: false,
+                        focus: true,
+                        index: index-1,
+                        showAnimationDuration: 0,
+                        hideAnimationDuration: 0,
+                        closeEl:false,
+                        shareEl: false,
+                        tapToClose: false,
+
+                    };
+
+                    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+                    gallery.init();
+                };
+
+
+            </script>
+</article>
+</div>
+<footer class="bg-gray-100">
+<div class="max-w-7xl mx-auto py-3 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-6">
+<nav class="grid grid-cols-2 md:grid-cols-none md:flex md:items-center md:justify-center inline-block" aria-label="Footer">
+<div class="px-4 py-2">
+<a href="/" class="text-tiny md:text-tiny text-gray-500 hover:text-gray-900">Početna</a>
+</div>
+<div class="px-4 py-2">
+<a href="/impressum" class="text-tiny md:text-base text-gray-500 hover:text-gray-900">
+Impressum
+</a>
+</div>
+<div class="px-4 py-2">
+<a href="/komentari" class="text-tiny md:text-base text-gray-500 hover:text-gray-900">
+Komentari
+</a>
+</div>
+<div class="px-4 py-2">
+<a href="/kontakt" class="text-tiny md:text-base text-gray-500 hover:text-gray-900">
+Kontakt
+</a>
+</div>
+<div class="px-4 py-2">
+<a href="/marketing" class="text-tiny md:text-base text-gray-500 hover:text-gray-900">
+Marketing
+</a>
+</div>
+<div class="px-4 py-2">
+<a href="/o-nama" class="text-tiny md:text-base text-gray-500 hover:text-gray-900">
+O nama
+</a>
+</div>
+<div class="px-4 py-2">
+<a href="/politika-privatnosti" class="text-tiny md:text-base text-gray-500 hover:text-gray-900">
+Privatnost
+</a>
+</div>
+<div class="px-4 py-2">
+<a href="/rss" class="text-tiny md:text-base text-gray-500 hover:text-gray-900">RSS</a>
+</div>
+</nav>
+<div class="mt-8 flex justify-center items-center space-x-6 text-tiny">
+<div class="hidden md:inline-block text-gray-500"> Pratite nas </div>
+<a href="https://www.facebook.com/Klix.ba" class="text-gray-400 hover:text-gray-700">
+<span class="sr-only">Facebook</span>
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+</svg>
+</a>
+<a href="https://twitter.com/klixba" class="text-gray-400 hover:text-gray-700">
+<span class="sr-only">Twitter</span>
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+</svg>
+</a>
+<a href="https://www.instagram.com/klixba/" class="text-gray-400 hover:text-gray-700">
+<span class="sr-only">Instagram</span>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+</a>
+<a href="https://www.youtube.com/user/xredakcija" class="text-gray-400 hover:text-gray-700">
+<span class="sr-only">YouTube</span>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" /></svg>
+</a>
+<a href="https://www.linkedin.com/company/klixba/" class="text-gray-400 hover:text-gray-700">
+<span class="sr-only">YouTube</span>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+</a>
+</div>
+<p class="mt-8 text-center text-xs md:text-sm text-gray-400">
+Copyright 2000-2021 InterSoft d.o.o. Sarajevo. ISSN 2566-3771. Sva prava zadržana. Zabranjeno preuzimanje sadržaja bez dozvole izdavača.
+</p>
+<p class="mt-8 text-center text-xs md:text-sm text-gray-400">
+<a href="javascript:Didomi.preferences.show()">Consent choices</a>
+</p>
+</div>
+</footer>
+
+<div id='ads_outofpage'>
+<script>
+        googletag.cmd.push(function() { googletag.display('ads_outofpage'); });
+    </script>
+</div>
+
+<script type="text/javascript">
+    !function(t){var e={};function n(r){if(e[r])return e[r].exports;var i=e[r]={i:r,l:!1,exports:{}};return t[r].call(i.exports,i,i.exports,n),i.l=!0,i.exports}n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)n.d(r,i,function(e){return t[e]}.bind(null,i));return r},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="/",n(n.s=2)}({2:function(t,e,n){t.exports=n("3Fk9")},"3Fk9":function(t,e,n){"use strict";n.r(e);n("s+lh"),n("pcBj"),n("v1EE"),n("CS5W")},CS5W:function(t,e,n){var r,i,a;!function(o,s){s=s.bind(null,o,o.document),t.exports?s(n("s+lh")):(i=[n("s+lh")],void 0===(a="function"==typeof(r=s)?r.apply(e,i):r)||(t.exports=a))}(window,(function(t,e,n){"use strict";var r,i,a={};function o(t,n,r){if(!a[t]){var i=e.createElement(n?"link":"script"),o=e.getElementsByTagName("script")[0];n?(i.rel="stylesheet",i.href=t):(i.onload=function(){i.onerror=null,i.onload=null,r()},i.onerror=i.onload,i.src=t),a[t]=!0,a[i.src||i.href]=!0,o.parentNode.insertBefore(i,o)}}e.addEventListener&&(i=/\(|\)|\s|'/,r=function(t,n){var r=e.createElement("img");r.onload=function(){r.onload=null,r.onerror=null,r=null,n()},r.onerror=r.onload,r.src=t,r&&r.complete&&r.onload&&r.onload()},addEventListener("lazybeforeunveil",(function(t){var e,a,s;if(t.detail.instance==n&&!t.defaultPrevented){var l=t.target;if("none"==l.preload&&(l.preload=l.getAttribute("data-preload")||"auto"),null!=l.getAttribute("data-autoplay"))if(l.getAttribute("data-expand")&&!l.autoplay)try{l.play()}catch(t){}else requestAnimationFrame((function(){l.setAttribute("data-expand","-10"),n.aC(l,n.cfg.lazyClass)}));(e=l.getAttribute("data-link"))&&o(e,!0),(e=l.getAttribute("data-script"))&&(t.detail.firesLoad=!0,o(e,null,(function(){t.detail.firesLoad=!1,n.fire(l,"_lazyloaded",{},!0,!0)}))),(e=l.getAttribute("data-require"))&&(n.cfg.requireJs?n.cfg.requireJs([e]):o(e)),(a=l.getAttribute("data-bg"))&&(t.detail.firesLoad=!0,r(a,(function(){l.style.backgroundImage="url("+(i.test(a)?JSON.stringify(a):a)+")",t.detail.firesLoad=!1,n.fire(l,"_lazyloaded",{},!0,!0)}))),(s=l.getAttribute("data-poster"))&&(t.detail.firesLoad=!0,r(s,(function(){l.poster=s,t.detail.firesLoad=!1,n.fire(l,"_lazyloaded",{},!0,!0)})))}}),!1))}))},pcBj:function(t,e,n){var r,i,a;!function(o,s){if(o){s=s.bind(null,o,o.document),t.exports?s(n("s+lh")):(i=[n("s+lh")],void 0===(a="function"==typeof(r=s)?r.apply(e,i):r)||(t.exports=a))}}("undefined"!=typeof window?window:0,(function(t,e,n){"use strict";var r,i,a,o,s,l,u,c,d,f,p,g,m,y,h,v,b=n.cfg,z=e.createElement("img"),A="sizes"in z&&"srcset"in z,E=/\s+\d+h/g,C=(i=/\s+(\d+)(w|h)\s+(\d+)(w|h)/,a=Array.prototype.forEach,function(){var t=e.createElement("img"),r=function(t){var e,n,r=t.getAttribute(b.srcsetAttr);r&&(n=r.match(i))&&((e="w"==n[2]?n[1]/n[3]:n[3]/n[1])&&t.setAttribute("data-aspectratio",e),t.setAttribute(b.srcsetAttr,r.replace(E,"")))},o=function(t){if(t.detail.instance==n){var e=t.target.parentNode;e&&"PICTURE"==e.nodeName&&a.call(e.getElementsByTagName("source"),r),r(t.target)}},s=function(){t.currentSrc&&e.removeEventListener("lazybeforeunveil",o)};e.addEventListener("lazybeforeunveil",o),t.onload=s,t.onerror=s,t.srcset="data:,a 1w 1h",t.complete&&s()});(b.supportsType||(b.supportsType=function(t){return!t}),t.HTMLPictureElement&&A)?!n.hasHDescriptorFix&&e.msElementsFromPoint&&(n.hasHDescriptorFix=!0,C()):t.picturefill||b.pf||(b.pf=function(e){var n,i;if(!t.picturefill)for(n=0,i=e.elements.length;n<i;n++)r(e.elements[n])},c=function(t,e){return t.w-e.w},d=/^\s*\d+\.*\d*px\s*$/,s=/(([^,\s].[^\s]+)\s+(\d+)w)/g,l=/\s/,u=function(t,e,n,r){o.push({c:e,u:n,w:1*r})},p=function(){var t,n,i;p.init||(p.init=!0,addEventListener("resize",(n=e.getElementsByClassName("lazymatchmedia"),i=function(){var t,e;for(t=0,e=n.length;t<e;t++)r(n[t])},function(){clearTimeout(t),t=setTimeout(i,66)})))},g=function(e,r){var i,a=e.getAttribute("srcset")||e.getAttribute(b.srcsetAttr);!a&&r&&(a=e._lazypolyfill?e._lazypolyfill._set:e.getAttribute(b.srcAttr)||e.getAttribute("src")),e._lazypolyfill&&e._lazypolyfill._set==a||(i=f(a||""),r&&e.parentNode&&(i.isPicture="PICTURE"==e.parentNode.nodeName.toUpperCase(),i.isPicture&&t.matchMedia&&(n.aC(e,"lazymatchmedia"),p())),i._set=a,Object.defineProperty(e,"_lazypolyfill",{value:i,writable:!0}))},m=function(e){return t.matchMedia?(m=function(t){return!t||(matchMedia(t)||{}).matches})(e):!e},y=function(e){var r,i,a,o,s,l,u;if(g(o=e,!0),(s=o._lazypolyfill).isPicture)for(i=0,a=(r=e.parentNode.getElementsByTagName("source")).length;i<a;i++)if(b.supportsType(r[i].getAttribute("type"),e)&&m(r[i].getAttribute("media"))){o=r[i],g(o),s=o._lazypolyfill;break}return s.length>1?(u=o.getAttribute("sizes")||"",u=d.test(u)&&parseInt(u,10)||n.gW(e,e.parentNode),s.d=function(e){var r=t.devicePixelRatio||1,i=n.getX&&n.getX(e);return Math.min(i||r,2.5,r)}(e),!s.src||!s.w||s.w<u?(s.w=u,l=function(t){for(var e,n,r=t.length,i=t[r-1],a=0;a<r;a++)if((i=t[a]).d=i.w/t.w,i.d>=t.d){!i.cached&&(e=t[a-1])&&e.d>t.d-.13*Math.pow(t.d,2.2)&&(n=Math.pow(e.d-.6,1.6),e.cached&&(e.d+=.15*n),e.d+(i.d-t.d)*n>t.d&&(i=e));break}return i}(s.sort(c)),s.src=l):l=s.src):l=s[0],l},(h=function(t){if(!A||!t.parentNode||"PICTURE"==t.parentNode.nodeName.toUpperCase()){var e=y(t);e&&e.u&&t._lazypolyfill.cur!=e.u&&(t._lazypolyfill.cur=e.u,e.cached=!0,t.setAttribute(b.srcAttr,e.u),t.setAttribute("src",e.u))}}).parse=f=function(t){return o=[],(t=t.trim()).replace(E,"").replace(s,u),o.length||!t||l.test(t)||o.push({c:t,u:t,w:99}),o},r=h,b.loadedClass&&b.loadingClass&&(v=[],['img[sizes$="px"][srcset].',"picture > img:not([srcset])."].forEach((function(t){v.push(t+b.loadedClass),v.push(t+b.loadingClass)})),b.pf({elements:e.querySelectorAll(v.join(", "))})))}))},"s+lh":function(t,e,n){!function(e,n){var r=function(t,e,n){"use strict";var r,i;if(function(){var e,n={lazyClass:"lazyload",loadedClass:"lazyloaded",loadingClass:"lazyloading",preloadClass:"lazypreload",errorClass:"lazyerror",autosizesClass:"lazyautosizes",fastLoadedClass:"ls-is-cached",iframeLoadMode:0,srcAttr:"data-src",srcsetAttr:"data-srcset",sizesAttr:"data-sizes",minSize:40,customMedia:{},init:!0,expFactor:1.5,hFac:.8,loadMode:2,loadHidden:!0,ricTimeout:0,throttleDelay:125};for(e in i=t.lazySizesConfig||t.lazysizesConfig||{},n)e in i||(i[e]=n[e])}(),!e||!e.getElementsByClassName)return{init:function(){},cfg:i,noSupport:!0};var a=e.documentElement,o=t.HTMLPictureElement,s=t.addEventListener.bind(t),l=t.setTimeout,u=t.requestAnimationFrame||l,c=t.requestIdleCallback,d=/^picture$/i,f=["load","error","lazyincluded","_lazyloaded"],p={},g=Array.prototype.forEach,m=function(t,e){return p[e]||(p[e]=new RegExp("(\\s|^)"+e+"(\\s|$)")),p[e].test(t.getAttribute("class")||"")&&p[e]},y=function(t,e){m(t,e)||t.setAttribute("class",(t.getAttribute("class")||"").trim()+" "+e)},h=function(t,e){var n;(n=m(t,e))&&t.setAttribute("class",(t.getAttribute("class")||"").replace(n," "))},v=function(t,e,n){var r=n?"addEventListener":"removeEventListener";n&&v(t,e),f.forEach((function(n){t[r](n,e)}))},b=function(t,n,i,a,o){var s=e.createEvent("Event");return i||(i={}),i.instance=r,s.initEvent(n,!a,!o),s.detail=i,t.dispatchEvent(s),s},z=function(e,n){var r;!o&&(r=t.picturefill||i.pf)?(n&&n.src&&!e.getAttribute("srcset")&&e.setAttribute("srcset",n.src),r({reevaluate:!0,elements:[e]})):n&&n.src&&(e.src=n.src)},A=function(t,e){return(getComputedStyle(t,null)||{})[e]},E=function(t,e,n){for(n=n||t.offsetWidth;n<i.minSize&&e&&!t._lazysizesWidth;)n=e.offsetWidth,e=e.parentNode;return n},C=(pt=[],gt=[],mt=pt,yt=function(){var t=mt;for(mt=pt.length?gt:pt,dt=!0,ft=!1;t.length;)t.shift()();dt=!1},ht=function(t,n){dt&&!n?t.apply(this,arguments):(mt.push(t),ft||(ft=!0,(e.hidden?l:u)(yt)))},ht._lsFlush=yt,ht),w=function(t,e){return e?function(){C(t)}:function(){var e=this,n=arguments;C((function(){t.apply(e,n)}))}},_=function(t){var e,r,i=function(){e=null,t()},a=function(){var t=n.now()-r;t<99?l(a,99-t):(c||i)(i)};return function(){r=n.now(),e||(e=l(a,99))}},N=(U=/^img$/i,J=/^iframe$/i,Q="onscroll"in t&&!/(gle|ing)bot/.test(navigator.userAgent),X=0,G=0,K=-1,V=function(t){G--,(!t||G<0||!t.target)&&(G=0)},Y=function(t){return null==D&&(D="hidden"==A(e.body,"visibility")),D||!("hidden"==A(t.parentNode,"visibility")&&"hidden"==A(t,"visibility"))},Z=function(t,n){var r,i=t,o=Y(t);for(I-=n,$+=n,q-=n,H+=n;o&&(i=i.offsetParent)&&i!=e.body&&i!=a;)(o=(A(i,"opacity")||1)>0)&&"visible"!=A(i,"overflow")&&(r=i.getBoundingClientRect(),o=H>r.left&&q<r.right&&$>r.top-1&&I<r.bottom+1);return o},tt=function(){var t,n,o,s,l,u,c,d,f,p,g,m,y=r.elements;if((j=i.loadMode)&&G<8&&(t=y.length)){for(n=0,K++;n<t;n++)if(y[n]&&!y[n]._lazyRace)if(!Q||r.prematureUnveil&&r.prematureUnveil(y[n]))st(y[n]);else if((d=y[n].getAttribute("data-expand"))&&(u=1*d)||(u=X),p||(p=!i.expand||i.expand<1?a.clientHeight>500&&a.clientWidth>500?500:370:i.expand,r._defEx=p,g=p*i.expFactor,m=i.hFac,D=null,X<g&&G<1&&K>2&&j>2&&!e.hidden?(X=g,K=0):X=j>1&&K>1&&G<6?p:0),f!==u&&(R=innerWidth+u*m,k=innerHeight+u,c=-1*u,f=u),o=y[n].getBoundingClientRect(),($=o.bottom)>=c&&(I=o.top)<=k&&(H=o.right)>=c*m&&(q=o.left)<=R&&($||H||q||I)&&(i.loadHidden||Y(y[n]))&&(B&&G<3&&!d&&(j<3||K<4)||Z(y[n],u))){if(st(y[n]),l=!0,G>9)break}else!l&&B&&!s&&G<4&&K<4&&j>2&&(F[0]||i.preloadAfterLoad)&&(F[0]||!d&&($||H||q||I||"auto"!=y[n].getAttribute(i.sizesAttr)))&&(s=F[0]||y[n]);s&&!l&&st(s)}},et=function(t){var e,r=0,a=i.throttleDelay,o=i.ricTimeout,s=function(){e=!1,r=n.now(),t()},u=c&&o>49?function(){c(s,{timeout:o}),o!==i.ricTimeout&&(o=i.ricTimeout)}:w((function(){l(s)}),!0);return function(t){var i;(t=!0===t)&&(o=33),e||(e=!0,(i=a-(n.now()-r))<0&&(i=0),t||i<9?u():l(u,i))}}(tt),nt=function(t){var e=t.target;e._lazyCache?delete e._lazyCache:(V(t),y(e,i.loadedClass),h(e,i.loadingClass),v(e,it),b(e,"lazyloaded"))},rt=w(nt),it=function(t){rt({target:t.target})},at=function(t){var e,n=t.getAttribute(i.srcsetAttr);(e=i.customMedia[t.getAttribute("data-media")||t.getAttribute("media")])&&t.setAttribute("media",e),n&&t.setAttribute("srcset",n)},ot=w((function(t,e,n,r,a){var o,s,u,c,f,p;(f=b(t,"lazybeforeunveil",e)).defaultPrevented||(r&&(n?y(t,i.autosizesClass):t.setAttribute("sizes",r)),s=t.getAttribute(i.srcsetAttr),o=t.getAttribute(i.srcAttr),a&&(c=(u=t.parentNode)&&d.test(u.nodeName||"")),p=e.firesLoad||"src"in t&&(s||o||c),f={target:t},y(t,i.loadingClass),p&&(clearTimeout(W),W=l(V,2500),v(t,it,!0)),c&&g.call(u.getElementsByTagName("source"),at),s?t.setAttribute("srcset",s):o&&!c&&(J.test(t.nodeName)?function(t,e){var n=t.getAttribute("data-load-mode")||i.iframeLoadMode;0==n?t.contentWindow.location.replace(e):1==n&&(t.src=e)}(t,o):t.src=o),a&&(s||c)&&z(t,{src:o})),t._lazyRace&&delete t._lazyRace,h(t,i.lazyClass),C((function(){var e=t.complete&&t.naturalWidth>1;p&&!e||(e&&y(t,i.fastLoadedClass),nt(f),t._lazyCache=!0,l((function(){"_lazyCache"in t&&delete t._lazyCache}),9)),"lazy"==t.loading&&G--}),!0)})),st=function(t){if(!t._lazyRace){var e,n=U.test(t.nodeName),r=n&&(t.getAttribute(i.sizesAttr)||t.getAttribute("sizes")),a="auto"==r;(!a&&B||!n||!t.getAttribute("src")&&!t.srcset||t.complete||m(t,i.errorClass)||!m(t,i.lazyClass))&&(e=b(t,"lazyunveilread").detail,a&&L.updateElem(t,!0,t.offsetWidth),t._lazyRace=!0,G++,ot(t,e,a,r,n))}},lt=_((function(){i.loadMode=3,et()})),ut=function(){3==i.loadMode&&(i.loadMode=2),lt()},ct=function(){B||(n.now()-O<999?l(ct,999):(B=!0,i.loadMode=3,et(),s("scroll",ut,!0)))},{_:function(){O=n.now(),r.elements=e.getElementsByClassName(i.lazyClass),F=e.getElementsByClassName(i.lazyClass+" "+i.preloadClass),s("scroll",et,!0),s("resize",et,!0),s("pageshow",(function(t){if(t.persisted){var n=e.querySelectorAll("."+i.loadingClass);n.length&&n.forEach&&u((function(){n.forEach((function(t){t.complete&&st(t)}))}))}})),t.MutationObserver?new MutationObserver(et).observe(a,{childList:!0,subtree:!0,attributes:!0}):(a.addEventListener("DOMNodeInserted",et,!0),a.addEventListener("DOMAttrModified",et,!0),setInterval(et,999)),s("hashchange",et,!0),["focus","mouseover","click","load","transitionend","animationend"].forEach((function(t){e.addEventListener(t,et,!0)})),/d$|^c/.test(e.readyState)?ct():(s("load",ct),e.addEventListener("DOMContentLoaded",et),l(ct,2e4)),r.elements.length?(tt(),C._lsFlush()):et()},checkElems:et,unveil:st,_aLSL:ut}),L=(P=w((function(t,e,n,r){var i,a,o;if(t._lazysizesWidth=r,r+="px",t.setAttribute("sizes",r),d.test(e.nodeName||""))for(a=0,o=(i=e.getElementsByTagName("source")).length;a<o;a++)i[a].setAttribute("sizes",r);n.detail.dataAttr||z(t,n.detail)})),S=function(t,e,n){var r,i=t.parentNode;i&&(n=E(t,i,n),(r=b(t,"lazybeforesizes",{width:n,dataAttr:!!e})).defaultPrevented||(n=r.detail.width)&&n!==t._lazysizesWidth&&P(t,i,r,n))},T=_((function(){var t,e=x.length;if(e)for(t=0;t<e;t++)S(x[t])})),{_:function(){x=e.getElementsByClassName(i.autosizesClass),s("resize",T)},checkElems:T,updateElem:S}),M=function(){!M.i&&e.getElementsByClassName&&(M.i=!0,L._(),N._())};var x,P,S,T;var F,B,W,j,O,R,k,I,q,H,$,D,U,J,Q,X,G,K,V,Y,Z,tt,et,nt,rt,it,at,ot,st,lt,ut,ct;var dt,ft,pt,gt,mt,yt,ht;return l((function(){i.init&&M()})),r={cfg:i,autoSizer:L,loader:N,init:M,uP:z,aC:y,rC:h,hC:m,fire:b,gW:E,rAF:C}}(e,e.document,Date);e.lazySizes=r,t.exports&&(t.exports=r)}("undefined"!=typeof window?window:{})},v1EE:function(t,e,n){var r,i,a;!function(o,s){if(o){s=s.bind(null,o,o.document),t.exports?s(n("s+lh")):(i=[n("s+lh")],void 0===(a="function"==typeof(r=s)?r.apply(e,i):r)||(t.exports=a))}}("undefined"!=typeof window?window:0,(function(t,e,n){"use strict";if(t.addEventListener){var r=/\s+(\d+)(w|h)\s+(\d+)(w|h)/,i=/parent-fit["']*\s*:\s*["']*(contain|cover|width)/,a=/parent-container["']*\s*:\s*["']*(.+?)(?=(\s|$|,|'|"|;))/,o=/^picture$/i,s=n.cfg,l={getParent:function(e,n){var r=e,i=e.parentNode;return n&&"prev"!=n||!i||!o.test(i.nodeName||"")||(i=i.parentNode),"self"!=n&&(r="prev"==n?e.previousElementSibling:n&&(i.closest||t.jQuery)&&(i.closest?i.closest(n):jQuery(i).closest(n)[0])||i),r},getFit:function(t){var e,n,r=getComputedStyle(t,null)||{},o=r.content||r.fontFamily,s={fit:t._lazysizesParentFit||t.getAttribute("data-parent-fit")};return!s.fit&&o&&(e=o.match(i))&&(s.fit=e[1]),s.fit?(!(n=t._lazysizesParentContainer||t.getAttribute("data-parent-container"))&&o&&(e=o.match(a))&&(n=e[1]),s.parent=l.getParent(t,n)):s.fit=r.objectFit,s},getImageRatio:function(e){var n,i,a,l,u,c,d,f=e.parentNode,p=f&&o.test(f.nodeName||"")?f.querySelectorAll("source, img"):[e];for(n=0;n<p.length;n++)if(i=(e=p[n]).getAttribute(s.srcsetAttr)||e.getAttribute("srcset")||e.getAttribute("data-pfsrcset")||e.getAttribute("data-risrcset")||"",a=e._lsMedia||e.getAttribute("media"),a=s.customMedia[e.getAttribute("data-media")||a]||a,i&&(!a||(t.matchMedia&&matchMedia(a)||{}).matches)){(l=parseFloat(e.getAttribute("data-aspectratio")))||((u=i.match(r))?"w"==u[2]?(c=u[1],d=u[3]):(c=u[3],d=u[1]):(c=e.getAttribute("width"),d=e.getAttribute("height")),l=c/d);break}return l},calculateSize:function(t,e){var n,r,i,a=this.getFit(t),o=a.fit,s=a.parent;return"width"==o||("contain"==o||"cover"==o)&&(r=this.getImageRatio(t))?(s?e=s.clientWidth:s=t,i=e,"width"==o?i=e:(n=e/s.clientHeight)&&("cover"==o&&n<r||"contain"==o&&n>r)&&(i=e*(r/n)),i):e}};n.parentFit=l,e.addEventListener("lazybeforesizes",(function(t){if(!t.defaultPrevented&&t.detail.instance==n){var e=t.target;t.detail.width=l.calculateSize(e,t.detail.width)}}))}}))}});
+</script>
+<script type="text/javascript">
+    lazySizes.init();
+</script>
+<script type="text/javascript">
+    function toggleNav() {
+        //var element = document.getElementById("sidebar");
+        document.getElementById("sidebar").classList.toggle("hidden");
+        document.getElementById("sidebar-open").classList.toggle("hidden");
+        document.getElementById("sidebar-close").classList.toggle("hidden");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleSearch() {
+        //var element = document.getElementById("sidebar");
+        document.getElementById("search").classList.toggle("hidden");
+        document.getElementById("logo").classList.toggle("hidden");
+        //document.getElementById("nav_items").classList.toggle("hidden");
+        document.getElementById("user").classList.toggle("hidden");
+        document.getElementById("nav_items").classList.toggle("md:block");
+        document.getElementById("search-open").classList.toggle("hidden");
+        document.getElementById("search-close").classList.toggle("hidden");
+    }
+</script>
+
+<script type="text/javascript">
+        window._qevents = window._qevents || [];
+
+        (function() {
+            var elem = document.createElement('script');
+            elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+            elem.async = true;
+            elem.type = "text/javascript";
+            var scpt = document.getElementsByTagName('script')[0];
+            scpt.parentNode.insertBefore(elem, scpt);
+        })();
+
+        window._qevents.push({
+            qacct:"p-jDNNJtk2-P6yn",
+            uid:"__INSERT_EMAIL_HERE__"
+        });
+    </script>
+<noscript>
+        <div style="display:none;">
+            <img src="//pixel.quantserve.com/pixel/p-jDNNJtk2-P6yn.gif" border="0" height="1" width="1" alt="Quantcast"/>
+        </div>
+    </noscript>
+
+
+<script src="//ap.lijit.com/www/sovrn_beacon_standalone/sovrn_standalone_beacon.js?iid=13499048" id="sBeacon"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7a33b0eb0e","applicationID":"442221064","transactionName":"Y1ZWN0FRDRVWWxZYC1ocdQBHWQwIGFsOUApVWA==","queueTime":0,"applicationTime":130,"atts":"TxFVQQlLHhs=","errorBeacon":"bam.nr-data.net","agent":""}</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6d5df3d9d9d27875","token":"3c42cfaecf29448f8eb243f5be518558","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
